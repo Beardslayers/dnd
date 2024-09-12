@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>DND Wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" charset="utf-8"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+          $("#header").load("header.html"); 
+        });
+    </script> 
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id = "button_group">
+        <button id = "Select" class = "center">Button 1</button>
+        <button id = "Select" class = "center">Button 2</button>
+        <button id = "Select">Button 3</button>
+        <button id = "Select">Button 4</button>
+        <button id = "Select">Button 5</button>
+    </div>
+    <p>Please enter your line-separated list</p>
+    <textarea id = "List" type="text"></textarea>
+    <p>Please enter how many items you want</p>
+    <input id = "Size" type = "number" min="0"></input>
+    <p></p>
+    <button id = "Select">Generate your sublist</button>
+    <p id = "Output"></p>
+</body>
