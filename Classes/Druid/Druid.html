@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>DND Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src = "/collapsible.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("/header.html"); 
+        });
+    </script> 
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="space"></div>
+    <div class = "center_content_block">
+        <div class="spacer"></div>
+        <div class="row_center">
+            <div class="center_content"><h1 style="font-weight: normal"><span id = "druid">Druid</span></h1></div>
+            <button type = "button" class="collapsible" id = "druid_summary" onclick="collapse('druid_summary')">Class Summary</button>
+            <div class="collapsible_content">
+                <h4>
+                    General Flavor
+                </h4>
+                <p>
+                    Nature-themed magician with shapeshifting abilities.
+                </p>
+                <h4>
+                    Ability Summary
+                </h4>
+                <p>
+                    Full Spellcaster [Utility, Damage, Control, Summoning, Moderate Healing, Resurrection]
+                </p>
+                <p>
+                    Turn Into Animals
+                </p>
+            </div>
+            <button type = "button" class="collapsible" id = "druid_flavor" onclick="collapse('druid_flavor')">Class Flavor</button>
+            <div class="collapsible_content">
+                <p>
+                    Holding high a gnarled staff wreathed with holly, an elf summons 
+                    the fury of the storm and calls down explosive bolts of lightning 
+                    to smite the torch-carrying orcs who threaten her forest.
+                </p>
+                <p>
+                    Crouching out of sight on a high tree branch in the form of a leopard, 
+                    a human peers out of the jungle at the strange construction of a temple 
+                    of Evil Elemental Air, keeping a close eye on the invaders' activities.
+                </p>
+                <p>
+                    Swinging a blade formed of pure fire, a half-elf charges into a mass 
+                    of skeletal soldiers, sundering the unnatural magic that gives the 
+                    creatures the mocking semblance of life.
+                </p>
+                <p>
+                    Whether calling on the elemental forces of nature or emulating the 
+                    creatures of the animal world, druids are an embodiment of nature's 
+                    resilience, cunning, and fury. The claim no mastery over nature. 
+                    Instead they see themselves as extensions of nature's indomitable will.
+                </p>
+                <p>
+                    Some druids focus on shaping the terrain around them, while others 
+                    channel the power of nature into their own bodies. No matter the 
+                    method, when a druid steps on the warpath, nature and the elements 
+                    themselves lend their aid.
+                </p>
+                <h4>
+                    Power of Nature
+                </h4>
+                <p>
+                    Druids revere nature above all, gaining their spells and other 
+                    magical powers either from the force of nature itself or from 
+                    a nature deity. Many druids pursue a mystic spirituality of 
+                    transcendent union with nature rather than devotion to a divine 
+                    entity, while others serve gods of wild nature, animals, or 
+                    elemental forces. The ancient druidic traditions are sometimes 
+                    called the Natural Religion, in contrast to the worship of gods 
+                    in temples and shrines.
+                </p>
+                <p>
+                    Druid spells are oriented toward nature and animals—the power of 
+                    tooth and claw, of sun and moon, of fire and storm. Druids also 
+                    gain the ability to take on animal forms, and some druids make 
+                    a particular study of this practice, even to the point where 
+                    they prefer animal form to their natural form.
+                </p>
+                <h4>
+                    Preserve the Balance
+                </h4>
+                <p>
+                    For druids, nature exists in a precarious balance. The four elements 
+                    that make up a world—air, earth, fire, and water—must remain in equilibrium. 
+                    If one element were to gain power over the others, the world could be 
+                    destroyed, drawn into one of the elemental planes and broken apart into 
+                    its component elements. Thus, druids oppose factions of Elemental Evil 
+                    and others who promote one element to the exclusion of others.
+                </p>
+                <p>
+                    Druids are also concerned with the delicate ecological balance that 
+                    sustains plant and animal life, and the need for civilized folk to 
+                    live in harmony with nature, not in opposition to it. Druids accept 
+                    that which is cruel in nature, and they that that which is unnatural, 
+                    including aberrations and undead. Druids sometimes lead raids against 
+                    such creatures, especially when the monsters encroach on the druids' 
+                    territory.
+                </p>
+                <p>
+                    Druids are often found guarding sacred sites or watching over regions 
+                    of unspoiled nature. But when a significant danger arises, threatening 
+                    nature's balance or the lands they protect, druids take on a more active 
+                    role in combating the threat, as adventurers.
+                </p>
+                <h4>
+                    Creating a Druid
+                </h4>
+                <p>
+                    When making a druid, consider why your character has such a close bond 
+                    with nature. Perhaps your druid lives in a society where the Natural 
+                    Religion still thrives, or was raised by a druid after being abandoned 
+                    in the depths of a forest. Perhaps your character had a dramatic encounter 
+                    with the spirits of nature, coming face to face with a giant eagle or dire 
+                    wolf and surviving the experience. Maybe your character experienced 
+                    an epic storm or a volcanic eruption, which your character interpreted 
+                    as a sign that becoming a druid was part of your character's destiny.
+                </p>
+                <p>
+                    Have you always been an adventurer as part of your druidic calling, 
+                    or did you first spend time as a caretaker of a sacred grove or spring? 
+                    Perhaps your homeland was befouled by evil, and you took up an adventuring 
+                    life in hopes of finding a new home or purpose.
+                </p>
+            </div>
+            <div class="center_content"><p>
+                <em>
+                    You must have an Wisdom score of 13 or 
+                    higher in order to multiclass into this class.
+                </em>
+            </p></div>
+            <table class = "class_table">
+                <tr class="class_table_header_row">
+                    <th colspan="4">The Druid</th>
+                    <th colspan="9">Spell Slots per Spell Level</th>
+                </tr>
+                <tr class="class_table_header_row">
+                    <th>Level</th>
+                    <th>Proficiency Bonus</th>
+                    <th>Features</th>
+                    <th>Cantrips Known</th>
+                    <th>1st</th>
+                    <th>2nd</th>
+                    <th>3rd</th>
+                    <th>4th</th>
+                    <th>5th</th>
+                    <th>6th</th>
+                    <th>7th</th>
+                    <th>8th</th>
+                    <th>9th</th>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>1st</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#druidic">Druidic</a>,
+                        <a class="body_link" href="#spellcasting">Spellcasting</a>
+                    </td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>2nd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#wild_shape">Wild Shape</a>, 
+                        <a class="body_link" href="#druid_circle">Druid Circle</a>,
+                        <a class="body_link" href="#wild_companion">Wild Companion</a>
+                    </td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>3rd</td>
+                    <td>+2</td>
+                    <td>—</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>4th</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#wild_shape">Wild Shape Improvement</a>, 
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>5th</td>
+                    <td>+3</td>
+                    <td>—</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>6th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#druid_circle">Druid Circle Feature</a>,
+                    </td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>7th</td>
+                    <td>+3</td>
+                    <td>—</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>8th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#wild_shape">Wild Shape Improvement</a>, 
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>9th</td>
+                    <td>+4</td>
+                    <td>—</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>10th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#druid_circle">Druid Circle Feature</a>,
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>11th</td>
+                    <td>+4</td>
+                    <td>—</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>12th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>13th</td>
+                    <td>+5</td>
+                    <td>—</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>14th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#druid_circle">Druid Circle Feature</a>,
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>15th</td>
+                    <td>+5</td>
+                    <td>—</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>16th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>17th</td>
+                    <td>+6</td>
+                    <td>—</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>18th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#timeless_body">Timeless Body</a>,
+                        <a class="body_link" href="#beast_spells">Beast Spells</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>19th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>20th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#archdruid">Archdruid</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <div class="center_content"><h1 style="font-weight: 600">
+                Class Features
+            </h1>
+            <p>
+                As a druid, you gain the following class features.
+            </p>
+            <h3>
+                Hit Points
+            </h3>
+            <p>
+                <strong>Hit Dice:</strong> 1d8 per druid level
+            </p>
+            <p>
+                <strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier
+            </p>
+            <p>
+                <strong>Hit Points at Higher Levels:</strong> 1d8 + your Constitution 
+                modifier per druid level after 1st.
+            </p>
+            <h3>
+                Proficiencies
+            </h3>
+            <p>
+                <strong>Armor:</strong> Light armor, medium armor, shields
+            </p>
+            <p>
+                <strong>Weapons:</strong> Simple melee weapons, darts, scimitars, slings
+            </p>
+            <p>
+                <strong>Tools:</strong> Alchemist's supplies
+            </p>
+            <p>
+                <strong>Saving Throws:</strong> Intelligence, Wisdom
+            </p>
+            <p>
+                <strong>Skills:</strong> Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival
+            </p>
+            <h3>
+                Equipment
+            </h3>
+            <p>
+                You start with the following equipment, in addition to the equipment
+                granted by your background:
+                <ul>
+                    <li>(a) a wooden shield or (b) any simple weapon</li>
+                    <li>(a) a scimitar or (b) any simple melee weapon</li>
+                    <li>Leather armor, an explorer's pack, and a druidic focus</li>
+                </ul>
+                Alternatively, you can buy your own equipment, starting with 44 gp, 8 sp, and 3 cp.
+            </p>
+            <h2 id="druidic">
+                Druidic
+            </h2>
+            <p>
+                You know Druidic, the secret language of druids. You can speak the 
+                language and use it to leave hidden messages. You and others who 
+                know this language automatically spot such a message. Others spot 
+                the message's presence with a successful DC 15 Wisdom (Perception) 
+                check but can't decipher it without magic.
+            </p>
+            <h2 id="spellcasting">
+                Spellcasting
+            </h2>
+            <p>
+                Drawing on the divine essence of nature itself, you can cast spells 
+                to shape that essence to your will.
+            </p>
+            <h3>
+                Cantrips
+            </h3>
+            <p>
+                At 1st level, you know two cantrips of your choice from the 
+                <a class="body_link" href=/Spells/DruidSpellList.html>druid spell list</a>. 
+                You learn additional druid cantrips of your choice at higher levels, 
+                as shown in the Cantrips Known column of the Druid table.
+            </p>
+            <p>
+                When you gain a level in this class, you can replace one of the 
+                druid cantrips you know with another cantrip from the 
+                <a class="body_link" href=/Spells/DruidSpellList.html>druid spell list</a>
+            </p>
+            <h3>
+                Preparing and Casting Spells
+            </h3>
+            <p>
+                The Druid table shows how many spell slots you have to cast 
+                your spells of 1st level and higher. To cast one of these 
+                spells, you must expend a slot of the spell's level or higher. 
+                You regain all expended spell slots when you finish a long rest.
+            </p>
+            <p>
+                You prepare the list of druid spells that are available for you 
+                to cast, choosing from the 
+                <a class="body_link" href=/Spells/DruidSpellList.html>druid spell list</a>. 
+                When you do so, choose a number of druid spells equal to your Wisdom 
+                modifier + your druid level (minimum of one spell). The spells must be 
+                of a level for which you have spell slots.
+            <p>
+                For example, if you are a 3rd-level druid, you have four 1st-level 
+                and two 2nd-level spell slots. With a Wisdom of 16, your list 
+                of prepared spells can include six spells of 1st or 2nd level, 
+                in any combination. If you prepare the 1st-level spell 
+                <a class="body_link" href=/Spells/CureWounds.html>Cure Wounds</a>, 
+                you can cast it using a 1st-level or 2nd-level slot. Casting the 
+                spell doesn't remove it from your list of prepared spells.
+            </p>
+            <p>
+                You can change your list of prepared spells when you finish a long rest. 
+                Preparing a new list of druid spells requires time spent in thought and 
+                meditation: at least 1 minute per spell level for each spell on your list.
+            </p>
+            <h3>
+                Spellcasting Ability
+            </h3>
+            <p>
+                Wisdom is your spellcasting ability for your druid spells, since your magic 
+                draws upon your devotion and attunement to nature. You use you Wisdom 
+                whenever a spell refers to your spellcasting ability. In addition, you 
+                use your Wisdom modifier when setting the saving throw DC for a druid spell 
+                you cast and when making an attack roll with one.
+            </p>
+            <p>
+                <strong>Spell save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier
+            </p>
+            <p>
+                <strong>Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier
+            </p>
+            <h3>
+                Ritual Casting
+            </h3>
+            <p>
+                You can cast a druid spell as a ritual if that spell has 
+                the ritual tag and you have the spell prepared.
+            </p>
+            <h3>
+                Spellcasting Focus
+            </h3>
+            <p>
+                You can use a druidic focus as a spellcasting focus for your druid spells.
+            </p>
+            <h2 id="wild_shape">
+                Wild Shape
+            </h2>
+            <p>
+                Starting at 2nd level, you can use your action to magically assume 
+                the shape of a beast that you have seen before. You can use this 
+                feature twice. You regain expended uses when you finish a short or 
+                long rest.
+            </p>
+            <p>
+                Your druid level determines the beasts you can transform into, as 
+                shown in the Beast Shapes table. At 2nd level, for example, you can 
+                transform into any beast that has a challenge rating of 1/4 or lower 
+                that doesn't have a flying or swimming speed.
+            </p>
+            <table class = "class_table">
+                <tr class="class_table_header_row">
+                    <th colspan="4">Beast Shapes</th>
+                </tr>
+                <tr class="class_table_header_row">
+                    <th>Level</th>
+                    <th>Max CR</th>
+                    <th>Limitations</th>
+                    <th>Example</th>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>2nd</td>
+                    <td>1/4</td>
+                    <td>No flying or swimming speed</td>
+                    <td>Wolf</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>4th</td>
+                    <td>1/2</td>
+                    <td>No flying speed</td>
+                    <td>Crocodile</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>8th</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>Giant Eagle</td>
+                </tr>
+            </table>
+            <p>
+                You can stay in a beast shape for a number of hours equal to half 
+                your druid level. You then revert to your normal form unless you 
+                expend another use of this feature. You can revert to your normal 
+                form earlier by using a bonus action on your turn. You automatically 
+                revert if you fall unconscious, drop to 0 hit points, or die.
+            </p>
+            <p>
+                While you are transformed, the following rules apply:
+            </p>
+            <ul>
+                <li>Your game statistics are replaced by the statistics of the beast, 
+                    but you retain your alignment, personality, proficiency bonus, 
+                    and Intelligence, Wisdom, and Charisma scores. You also retain 
+                    all your skill and saving throw proficiencies in addition to 
+                    gaining those of the creature. If the creature has the same 
+                    proficiency as you and the bonus in its stat block is higher than 
+                    yours would be, use the creature's bonus instead of yours. If the 
+                    creature has any legendary or lair actions, you can't use them.
+                </li>
+                <li>
+                    When you transform, you assume the beast's hit points and Hit Dice. 
+                    When you revert to your normal form, you return to the number of 
+                    hit points you had before you transformed. However, if you revert 
+                    as a result of dropping to 0 hit points, any excess damage carries 
+                    over to your normal form. For example, if you take 10 damage in 
+                    animal form and have only 1 hit point left, you revert and take 9 
+                    damage. As long as the excess damage doesn't reduce your normal 
+                    form to 0 hit points, you aren't knocked unconscious.
+                </li>
+                <li>
+                    You can't cast spells, and your ability to speak or take any action 
+                    that requires hands is limited to the capabilities of your beast form. 
+                    Transforming doesn't break your concentration on a spell you've already 
+                    cast, however, or prevent you from taking actions that are part of a 
+                    spell, such as call lightning, that you've already cast.
+                </li>
+                <li>
+                    You retain the benefit of any features from your class, race, or other 
+                    source and can use them if they do not depend upon your normal form's 
+                    body. However, you can't use any of your special senses, such as 
+                    darkvision, unless your new form also has that feature.
+                </li>
+                <li>
+                    You choose whether your equipment falls to the ground in your space, 
+                    merges into your new form, or is worn by it. Worn equipment functions 
+                    as normal, but the DM decides whether it is practical for the new 
+                    form to wear a piece of equipment, based on the creature's shape and 
+                    size. Your equipment doesn't change size or shape to match the new 
+                    form, and any equipment that the new form can't wear must either fall 
+                    to the ground or merge with it. Equipment that merges with the form 
+                    has no effect until you leave the form.
+                </li>
+            </ul>
+            <h2 id="druid_circle">
+                Druid Circle
+            </h2>
+            <p>
+                At 2nd level, you choose to identify with a circle of druids. 
+                Choose one of the circles of
+                <a class="body_link" href=/Classes/Druid/Blight.html>the Blight</a>, 
+                <a class="body_link" href=/Classes/Druid/Dreams.html>Dreams</a>, 
+                <a class="body_link" href=/Classes/Druid/Land.html>the Land</a>, 
+                <a class="body_link" href=/Classes/Druid/Moon.html>the Moon</a>, 
+                <a class="body_link" href=/Classes/Druid/Shepherd.html>the Shepherd</a>, 
+                <a class="body_link" href=/Classes/Druid/Spores.html>Spores</a>, 
+                <a class="body_link" href=/Classes/Druid/Stars.html>Stars</a>, 
+                or <a class="body_link" href=/Classes/Druid/Wildfire.html>Wildfire</a>, 
+                Your choice grants you features at 2nd level and again at 6th, 10th, 
+                and 14th level.
+            </p>
+            <h2 id="wild_companion">
+                Wild Companion
+            </h2>
+            <p>
+                At 2nd level, you gain the ability to summon a spirit that assumes 
+                an animal form: as an action, you can expend a use of your Wild Shape 
+                feature to cast the Find Familiar spell, without material components.
+            </p>
+            <p>
+                When you cast the spell in this way, the familiar is a beast instead 
+                of a fey.
+            </p>
+            <h2 id="ability_score_improvement">
+                Ability Score Improvement
+            </h2>
+            <p>
+                When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can 
+                increase one ability score of your choice by 2, increase two ability scores of 
+                your choice by 1, or gain one <a class="body_link" href=/Feats/Feats.html>feat</a> 
+                of your choice. As normal, you can't increase an ability score above 20 using this 
+                feature.
+            </p>
+            <h2 id="timeless_body">
+                Timeless Body
+            </h2>
+            <p>
+                Starting at 18th level, the primal magic that you wield causes you 
+                to age more slowly. For every 10 years that pass, your body ages 
+                only 1 year.
+            </p>
+            <h2 id="beast_spells">
+                Beast Spells
+            </h2>
+            <p>
+                Beginning at 18th level, you can cast many of your druid spells 
+                in any shape you assume using Wild Shape. You can perform 
+                the somatic and verbal components of a druid spell while in 
+                a beast shape, but you aren't able to provide material components.
+            </p>
+            <h2 id="archdruid">
+                Archdruid
+            </h2>
+            <p>
+                At 20th level, you are fully connected with the forces of nature. 
+                You can use your Wild Shape an unlimited number of 
+                times, and if you use your Wild Shape to transform into a beast 
+                of CR 1 or lower, you assume hit points and Hit Dice equal to 
+                twice those of the beast.
+            </p>
+            <p>
+                Additionally, you can ignore the verbal and somatic components 
+                of your druid spells, as well as any material components that 
+                lack a cost and aren't consumed by a spell. You gain this benefit 
+                in both your normal shape and your beast shape from Wild Shape.
+            </p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <div class="space"></div>
+</body>

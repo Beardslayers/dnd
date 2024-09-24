@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>DND Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src = "/collapsible.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("/header.html"); 
+        });
+    </script> 
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="space"></div>
+    <div class = "center_content_block">
+        <div class="spacer"></div>
+        <div class="row_center">
+            <div class="center_content"><h1 style="font-weight: normal"><span id = "monk">Monk</span></h1></div>
+            <button type = "button" class="collapsible" id = "monk_summary" onclick="collapse('monk_summary')">Class Summary</button>
+            <div class="collapsible_content">
+                <h4>
+                    General Flavor
+                </h4>
+                <p>
+                    Fast-moving martial artist with excellent combat reflexes.
+                </p>
+                <h4>
+                    Ability Summary
+                </h4>
+                <p>
+                    Good Defense
+                </p>
+                <p>
+                    Many Attacks
+                </p>
+                <p>
+                    Very Fast
+                </p>
+                <p>
+                    Damage Reduction
+                </p>
+            </div>
+            <button type = "button" class="collapsible" id = "monk_flavor" onclick="collapse('monk_flavor')">Class Flavor</button>
+            <div class="collapsible_content">
+                <p>
+                    Her fists a blur as they deflect an incoming hail of arrows, 
+                    a half-elf spring over a barricade and throws herself into 
+                    the massed ranks of hobgoblins on the other side. She whirls 
+                    among them, knocking their blows aside and sending them reeling, 
+                    until she stands alone.
+                </p>
+                <p>
+                    Taking a deep breath, a human covered in tattoos settles into a 
+                    battle stance. As the first charging orcs reach him, he exhales 
+                    and a blast of fire roars from his mouth, engulfing his foes.
+                </p>
+                <p>
+                    Moving with the silence of the night, a black-clad hobbit steps 
+                    into a shadow beneath an arch and emerges from another inky 
+                    shadow on a balcony a stone's throw away. She slides her blade 
+                    free of its cloth-wrapped scabbard and peers through the open 
+                    window at the tyrant prince, so vulnerable in the grip of sleep.
+                </p>
+                <p>
+                    Whatever their discipline, monks are united in their ability to 
+                    harness the energy that flows in their bodies. Whether channeled 
+                    as a striking display of combat prowess or a subtler focus of 
+                    defensive ability and speed, this energy infuses all that a monk does.
+                </p>
+                <p>
+                    Some monks choose to direct their energy into their bodies, 
+                    shifting their fists into natural weapons or enhancing their
+                    speed and movement beyond normal bounds. Others hone their
+                    minds, creating magical effects through meditation. Yet all
+                    monks, whatever their focus, are united in an absolute
+                    control of their bodies that allows them to move and fight
+                    with exceptional speed and skill.
+                </p>
+                <h4>
+                    The Energy of Life
+                </h4>
+                <p>
+                    Monks make careful study of the natural energy of life. 
+                    This energy is an element of the magic that suffuses the 
+                    universe—specifically, the element that flows through 
+                    living bodies. Monks harness this power within themselves 
+                    to create magical effects and exceed their bodies' physical 
+                    capabilities, and some of their special attacks can hinder 
+                    the flow of energy in their opponents. Using this energy, 
+                    monks channel uncanny speed and strength into their unarmed 
+                    strikes. As they gain experience, their martial training 
+                    and their mastery of vital energy gives them more power 
+                    over their bodies and the bodies of their foes.
+                </p>
+                <h4>
+                    Perfect Discipline
+                </h4>
+                <p>
+                    Monks are set apart from the common warrior by their
+                    abilities, which ride the border between natural and
+                    magical. While most soldiers and fighters rely on weapons 
+                    and armor to win battles, monks rely primarily on their 
+                    bodies and skills to see them through. Monks use the perfect
+                    control they maintain over their bodies to move like no
+                    other, dodging blows and harm with ease and delivering
+                    precise, powerful strikes.
+                </p>
+                <p>
+                    Some monks live in community with the surrounding population, 
+                    honing their discipline against the distractions of the world. 
+                    Others are sworn to isolation, emerging only to serve as spies 
+                    or assassins at the command of their leader, a noble patron, 
+                    or some other mortal or divine power.
+                </p>
+                <p>
+                    For most monks, becoming an adventurer means leaving a structured 
+                    lifestyle to become a wanderer. This can be a harsh transition, 
+                    and monks don't undertake it lightly. Those who leave their 
+                    homes take their work seriously, approaching their adventures 
+                    as personal tests of their physical and spiritual growth. As 
+                    a rule, monks are driven by a desire to accomplish a greater 
+                    mission than merely slaying monsters and plundering their 
+                    treasure.
+                </p>
+                <h4>
+                    Creating a Monk
+                </h4>
+                <p>
+                    As you make your monk character, think about how you learned 
+                    your skills and spent your formative years. Were you an orphan 
+                    or a child left on a monastery's threshold? Did your parents 
+                    promise you to an old master when your skills became apparent?
+                    Did you enter this regimented life to hide from a crime you 
+                    committed? Or did you choose the monastic life for yourself?
+                </p>
+                <p>
+                    Consider why you began adventuring. Were you chosen for a 
+                    particularly important mission? Perhaps you were cast out 
+                    of your community because of some rule violation. Did you 
+                    dread leaving, or were you happy to go? Is there something 
+                    you hope to accomplish in your adventures? Are you eager 
+                    to return to your home?
+                </p>
+            </div>
+            <div class="center_content"><p>
+                <em>
+                    You must have an Dexterity score of 13 or 
+                    higher in order to multiclass into this class.
+                </em>
+            </p></div>
+            <table class = "class_table">
+                <tr class="class_table_header_row">
+                    <th colspan="5">The Monk</th>
+                </tr>
+                <tr class="class_table_header_row">
+                    <th>Level</th>
+                    <th>Proficiency Bonus</th>
+                    <th>Features</th>
+                    <th>Unarmored Movement</th>
+                    <th>Energy Points</th>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>1st</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#dexterous_combat">Dexterous Combat</a>,
+                        <a class="body_link" href="#unarmored_defense">Unarmored Defense</a>,
+                        <a class="body_link" href="#martial_arts">Martial Arts (d6)</a>
+                    </td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>2nd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#unarmored_movement">Unarmored Movement</a>,
+                        <a class="body_link" href="#energy_points">Energy Points</a>,
+                        <a class="body_link" href="#flurry_of_blows">Flurry of Blows</a>,
+                        <a class="body_link" href="#deflect_attacks">Deflect Attacks</a>
+                    </td>
+                    <td>10 ft.</td>
+                    <td>2</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>3rd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#monastic_tradition">Monastic Tradition</a>,
+                        <a class="body_link" href="#slow_fall">Slow Fall</a>
+                    </td>
+                    <td>10 ft.</td>
+                    <td>3</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>4th</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>10 ft.</td>
+                    <td>4</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>5th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#extra_attack">Extra Attack</a>,
+                        <a class="body_link" href="#stunning_strike">Stunning Strike</a>
+                    </td>
+                    <td>10 ft.</td>
+                    <td>5</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>6th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#martial_arts">Martial Arts (d8)</a>,
+                        <a class="body_link" href="#monastic_tradition">Monastic Tradition Feature</a>,
+                        <a class="body_link" href="#energy_strikes">Energy Strikes</a>
+                    </td>
+                    <td>15 ft.</td>
+                    <td>6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>7th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#evasion">Evasion</a>,
+                        <a class="body_link" href="#iron_will">Iron Will</a>
+                    </td>
+                    <td>15 ft.</td>
+                    <td>7</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>8th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>15 ft.</td>
+                    <td>8</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>9th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#unarmored_movement">Unarmored Movement Improvement</a>,
+                        <a class="body_link" href="#perfect_deflection">Perfect Deflection</a>,
+                        <a class="body_link" href="#step_of_the_wind">Step of the Wind</a>
+                    <td>15 ft.</td>
+                    <td>9</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>10th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#unarmored_defense">Unarmored Defense Improvement</a>,
+                        <a class="body_link" href="#flurry_of_blows">Flurry of Blows Improvement</a>,
+                        <a class="body_link" href="#focused_aim">Focused Aim</a>
+                    </td>
+                    <td>20 ft.</td>
+                    <td>10</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>11th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#martial_arts">Martial Arts (d10)</a>,
+                        <a class="body_link" href="#monastic_tradition">Monastic Tradition Feature</a>
+                    </td>
+                    <td>20 ft.</td>
+                    <td>11</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>12th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>20 ft.</td>
+                    <td>12</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>13th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#step_of_the_wind">Step of the Wind Improvement</a>,
+                        <a class="body_link" href="#universal_mind">Universal Mind</a>
+                    </td>
+                    <td>20 ft.</td>
+                    <td>13</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>14th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#timeless_body">Timeless Body</a>,
+                        <a class="body_link" href="#uncanny_metabolism">Uncanny Metabolism</a>
+                    </td>
+                    <td>25 ft.</td>
+                    <td>14</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>15th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#survivor">Survivor</a>,
+                        <a class="body_link" href="#eyes_of_truth">Eyes of Truth</a>
+                    </td>
+                    <td>25 ft.</td>
+                    <td>15</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>16th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>25 ft.</td>
+                    <td>16</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>17th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#martial_arts">Martial Arts (d12)</a>,
+                        <a class="body_link" href="#monastic_tradition">Monastic Tradition Feature</a>
+                    </td>
+                    <td>25 ft.</td>
+                    <td>17</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>18th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#conquering_will">Conquering Will</a>
+                    </td>
+                    <td>30 ft.</td>
+                    <td>18</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>19th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>30 ft.</td>
+                    <td>19</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>20th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#diamond_soul">Diamond Soul</a>
+                    </td>
+                    <td>30 ft.</td>
+                    <td>20</td>
+                </tr>
+            </table>
+            <div class="center_content"><h1 style="font-weight: 600">
+                Class Features
+            </h1>
+            <p>
+                As a monk, you gain the following class features.
+            </p>
+            <h3>
+                Hit Points
+            </h3>
+            <p>
+                <strong>Hit Dice:</strong> 1d8 per monk level
+            </p>
+            <p>
+                <strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier
+            </p>
+            <p>
+                <strong>Hit Points at Higher Levels:</strong> 1d8 + your Constitution 
+                modifier per monk level after 1st.
+            </p>
+            <h3>
+                Proficiencies
+            </h3>
+            <p>
+                <strong>Armor:</strong> Light armor
+            </p>
+            <p>
+                <strong>Weapons:</strong> Simple weapons, martial weapons with the light property, improvised weapons
+            </p>
+            <p>
+                <strong>Tools:</strong> Choose one type of artisan's tools or one musical instrument
+            </p>
+            <p>
+                <strong>Saving Throws:</strong> Strength, Dexterity
+            </p>
+            <p>
+                <strong>Skills:</strong> Choose two from Acrobatics, Athletics, History, Insight, Religion and Stealth
+            </p>
+            <h3>
+                Equipment
+            </h3>
+            <p>
+                You start with the following equipment, in addition to the equipment
+                granted by your background:
+                <ul>
+                    <li>(a) a shortsword or (b) any simple weapon</li>
+                    <li>(a) a dungeoneer's pack or (b) an explorer's pack</li>
+                    <li>10 darts</li>
+                </ul>
+                Alternatively, you can buy your own equipment, starting with 31 gp, 3 sp, and 4 cp.
+            </p>
+            <h2 id="unarmored_defense">
+                Unarmored Defense
+            </h2>
+            <p>
+                Beginning at 1st level, you gain one of the following benefits of your 
+                choice. At 9th level, you gain an additional benefit.
+            </p>
+            <ul>
+                <li>
+                    <strong>Feats of Might:</strong> While you are wearing no armor 
+                    and not wielding a shield, you can add your Strength modifier 
+                    to your Armor Class.
+                </li>
+                <li>
+                    <strong>Defense of the Intellect:</strong> While you are wearing no armor 
+                    and not wielding a shield, you can add your Intelligence modifier 
+                    to your Armor Class.
+                </li>
+                <li>
+                    <strong>Combat Instincts:</strong> While you are wearing no armor 
+                    and not wielding a shield, you can add your Wisdom modifier to your 
+                    Armor Class.
+                </li>
+                <li>
+                    <strong>Dance of Battle:</strong> While you are wearing no armor 
+                    and not wielding a shield, you can add your Charisma modifier to 
+                    your Armor Class.
+                </li>
+            </ul>
+            <p> 
+                When you gain a level in this class, you can replace one of your chosen 
+                benefits with another benefit of your choice.
+            </p>
+            <h2 id="dexterous_combat">
+                Dexterous Combat
+            </h2>
+            <p>
+                At 1st level, you have learned to fight nimbly and with precision.
+                You can use Dexterity instead of Strength for the attack and 
+                damage rolls of your unarmed strikes and monk weapons, which 
+                are simple melee weapons, improvised weapons, and any martial melee 
+                weapons that have the light property. In addition, when you would 
+                make an Athletics check in an attempt to grapple or shove a creature, 
+                you can instead make an Acrobatics check.
+            </p>
+            <p>
+                Also, while you are unarmed or wielding only monk weapons,
+                and you aren't wielding a shield, you can use a bonus action on your
+                to make one unarmed strike.
+            </p>
+            <h2 id="martial_arts">
+                Martial Arts
+            </h2>
+            <p>
+                At 1st level, your practice of martial arts gives you mastery of 
+                combat styles that use unarmed strikes and monk weapons. Your unarmed 
+                strikes are considered light weapons, and you can roll a d6 in place 
+                of the normal damage of your unarmed strike and in place of the normal 
+                damage die of a monk weapon. This die becomes a d8 at 6th level, 
+                a d10 at 11th level, and a d12 at 17th level.
+            </p>
+            
+            <h2 id="unarmored_movement">
+                Unarmored Movement
+            </h2>
+            <p>
+                At 2nd level, while you are not wearing medium or heavy armor or wielding 
+                a shield, your speed increases by 10 feet and you can use your Dexterity 
+                score instead of your Strength score to calculate your jump distance. 
+                This bonus increases when you reach certain monk levels, as shown in 
+                the Monk table.
+            </p>
+            <p>
+                At 9th level, you gain the ability to move along vertical surfaces 
+                and across liquids on your turn without falling during the move, 
+                you ignore difficult terrain, and your jump distance is doubled.
+            </p>
+            <h2 id="energy_points">
+                Energy Points
+            </h2>
+            <p>
+                Also starting at 2nd level, your training allows you to harness the 
+                energy of life within you. This energy is represented by a number of 
+                energy points. Your monk level determines the number of points you have, 
+                as shown in the energy points column of the Monk table. You can spend 
+                energy points to fuel various effects, which you gain as you level up.
+            </p>
+            <p>
+                When you spend an energy point, it is unavailable until you finish a 
+                short or long rest, at the end of which you draw all of your expended 
+                energy back into yourself.
+            </p>
+            <p>
+                Some of your energy point features require your target to make a saving throw to 
+                resist the feature's effects. The saving throw DC is calculated as follows:
+            </p>
+            <p>
+                <strong>Energy save DC</strong> = 8 + your proficiency bonus + your Dexterity modifier
+            </p>
+            <p>
+                If you spend an energy point as part of an action, you can spend
+
+            </p>
+            <h2 id="flurry_of_blows">
+                Flurry of Blows
+            </h2>
+            <p>
+                Immediately after you take the Attack action or spend an energy point 
+                as part of an action on your turn, you can spend 
+                1 energy point to make two unarmed strikes as a bonus action.
+            </p>
+            <p>
+                At 10th level, the number of unarmed strikes made as part of 
+                this bonus action increases to three.
+            </p>
+            <h2 id="deflect_attacks">
+                Deflect Attacks
+            </h2>
+            <p>
+                Starting at 2nd level, when you are hit by a weapon attack, 
+                you can use your reaction to deflect or catch the attack. 
+                When you do so, the damage you take from the attack is reduced 
+                by 1d10 + your Dexterity modifier + your monk level.
+            </p>
+            <p>
+                If you reduce a ranged weapon attack's damage to 0, you can 
+                immediately spend 1 energy point as part of the same reaction 
+                to make a ranged attack against the creature that attacked you. 
+                You make this attack with proficiency, regardless of your 
+                weapon proficiencies, and the attack deals an amount of damage 
+                equal to two rolls of your Martial Arts die plus your Dexterity 
+                modifier.
+            </p>
+            <p>
+                If you reduce a melee weapon attack's damage to 0, you can 
+                immediately spend 1 energy point as part of the same reaction 
+                to redirect the force and make an unarmed strike against 
+                a creature you can see within 5 feet of yourself. If the 
+                attack hits, roll your Martial Arts die twice instead of 
+                once and add the result together when determining damage.
+            </p>
+            <h2 id="monastic_tradition">
+                Monastic Tradition
+            </h2>
+            <p>
+                At 3rd level, you commit yourself to a monastric tradition.
+                Choose to follow one of the ways of
+                <a class="body_link" href=/Classes/Monk/AscendantDragon.html>the Ascendant Dragon</a>, 
+                <a class="body_link" href=/Classes/Monk/AstralSelf.html>the Astral Self</a>, 
+                <a class="body_link" href=/Classes/Monk/CaffeinatedMaster.html>the Caffeinated Master</a>, 
+                <a class="body_link" href=/Classes/Monk/FourElements.html>the Four Elements</a>, 
+                <a class="body_link" href=/Classes/Monk/Kensei.html>the Kensei</a>, 
+                <a class="body_link" href=/Classes/Monk/LivingWeapon.html>the Living Weapon</a>, 
+                <a class="body_link" href=/Classes/Monk/LongDeath.html>the Long Death</a>, 
+                <a class="body_link" href=/Classes/Monk/Mercy.html>the Mercy</a>, 
+                <a class="body_link" href=/Classes/Monk/OpenHand.html>the Open Hand</a>, 
+                <a class="body_link" href=/Classes/Monk/Shadow.html>the Shadow</a>, 
+                or <a class="body_link" href=/Classes/Monk/SunSoul.html>the Sun Soul</a>, 
+                Your choice grants you features at 3rd level and again at 6th, 11th, 
+                and 17th level.
+            </p>
+            <h2 id="slow_fall">
+                Slow Fall
+            </h2>
+            <p>
+                Beginning at 3rd level, you can use your reaction when you fall 
+                to reduce any falling damage you take by an amount equal to five 
+                times your monk level.
+            </p>
+            <h2 id="ability_score_improvement">
+                Ability Score Improvement
+            </h2>
+            <p>
+                When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, 
+                you can increase one ability score of your choice by 2, increase two ability scores of 
+                your choice by 1, or gain one <a class="body_link" href=/Feats/Feats.html>feat</a> 
+                of your choice. As normal, you can't increase an ability score above 20 using this 
+                feature.
+            </p>
+            <h2 id="extra_attack">
+                Extra Attack
+            </h2>
+            <p>
+                Beginning at 5th level, you can attack twice, instead of once, whenever 
+                you take the Attack action on your turn.
+            </p>
+            <h2 id="stunning_strike">
+                Stunning Strike
+            </h2>
+            <p>
+                Also at 5th level, you can interfere with the flow of energy in an 
+                opponent's body. Once per turn, when you hit another creature with 
+                a monk weapon or an unarmed strike, you can spend 1 energy point to 
+                attempt a stunning strike. The target must make a Constitution saving 
+                throw. On a failure, it is stunned until the start of your next turn. 
+                On a success, its speed is halved until the start of your next turn, 
+                and the next attack against it has advantage.
+            </p>
+            <h2 id="energy_strikes">
+                Energy Strikes
+            </h2>
+            <p>
+                Starting at 6th level, your training empowers your strikes to deal 
+                great damage. Your attacks deal double damage to objects and structures, 
+                and your unarmed strikes count as magical for the purpose of overcoming 
+                resistance and immunity to nonmagical attacks and damage.
+            </p>
+            <h2 id="evasion">
+                Evasion
+            </h2>
+            <p>
+                At 7th level, your instinctive agility lets you dodge out of 
+                the way of certain area effects, such as a blue dragon's lightning 
+                breath or a fireball spell. When you are subjected to an effect 
+                that allows you to make a Dexterity saving throw to take only 
+                half damage, you instead take no damage if you succeed on the 
+                saving throw, and only half damage if you fail.
+            </p>
+            <h2 id="iron_will">
+                Iron Will
+            </h2>
+            <p>
+                Also at 7th level, at the end of each of your turns, you can 
+                end one effect on yourself causing you to be charmed or frightened.
+            </p>
+            <h2 id="perfect_deflection">
+                Perfect Deflection
+            </h2>
+            <p>
+                Beginning at 9th level, when you or a creature within 5 feet 
+                of you is hit by a ranged weapon attack, you can use your reaction 
+                to spend 3 energy points. If you do, until the beginning of your next turn, 
+                whenever you or a creature within 5 feet of you is hit by a ranged 
+                weapon attack, including the attack that triggered this ability, 
+                you can reduce the damage taken from the attack by 1d10 + your 
+                Dexterity modifier + your monk level.
+            </p>
+            <h2 id="step_of_the_wind">
+                Step of the Wind
+            </h2>
+            <p>
+                Beginning at 9th level, your training and skill enable you 
+                to move easily through a battlefield. You can take a bonus 
+                action on each of your turns in combat. This action can be 
+                used only to take the Dash, Disengage, or Dodge action.
+            </p>
+            <p>
+                Beginning at 13th level, you can spend 1 energy point to take 
+                two of these actions as a bonus action instead.
+            </p>
+            <h2 id="focused_aim">
+                Focused Aim
+            </h2>
+            <p>
+                At 10th level, when you miss with an attack roll, you can 
+                spend 1 to 3 energy points to increase your attack roll 
+                by 2 for each of these energy points you spend, potentially 
+                turning the miss into a hit.
+            </p>
+            <h2 id="universal_mind">
+                Universal Mind
+            </h2>
+            <p>
+                At 14th level, you understand all spoken languages. Moreover, 
+                any creature that can understand a language can understand 
+                what you say.
+            </p>
+            <h2 id="timeless_body">
+                Timeless Body
+            </h2>
+            <p>
+                Beginning at 14th level, your energy sustains you so that you 
+                suffer none of the frailty of old age, and you can't be aged magically. 
+                In addition, you no longer need food, water, or sleep, you are immune 
+                to disease, and whenever you finish a short rest, your exhaustion 
+                level, if any, is decreased by 1.
+            </p>
+            <h2 id="uncanny_metabolism">
+                Uncanny Metabolism
+            </h2>
+            <p>
+                Beginning at 15th level, when you roll initiative, you can regain 
+                all expended energy points. When you do so, roll your Martial Arts 
+                die, and you regain a number of hit points equal to your monk level 
+                plus the number rolled.
+            </p>
+            <p>
+                Once you have used this feature, you can't do so again until you 
+                finish a long rest.
+            </p>
+            <h2 id="survivor">
+                Survivor
+            </h2>
+            <p>
+                Beginning at 15th level, your mastery of self grants you 
+                proficiency in all saving throws, including death saving throws.
+            </p>
+            <h2 id="eyes_of_truth">
+                Eyes of Truth
+            </h2>
+            <p>
+                At 15th level, you gain 10 feet of truesight, piercing through 
+                all disguises and deceptions.
+            </p>
+            <h2 id="conquering_will">
+                Conquering Will
+            </h2>
+            <p>
+                Beginning at 18th level, when you make a saving throw and fail, 
+                you can spend 1 energy point to reroll it and take the second result.
+            </p>
+            <h2 id="diamond_soul">
+                Diamond Soul
+            </h2>
+            <p>
+                At 20th level, you have trained yourself beyond to go 
+                beyond the normal limits of mortal beings. When you use your 
+                Flurry of Blows ability, you can spend 1 additional energy point 
+                to take the Dodge action as part of the same bonus action.
+            </p>
+            <p>
+                In addition, as an action, you can spend 4 energy points to become 
+                invisible for 1 minute. During that time, you have resistance 
+                to all damage but force damage.
+            </p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <div class="space"></div>
+</body>

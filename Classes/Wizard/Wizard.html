@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>DND Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src = "/collapsible.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("/header.html"); 
+        });
+    </script> 
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="space"></div>
+    <div class = "center_content_block">
+        <div class="spacer"></div>
+        <div class="row_center">
+            <div class="center_content"><h1 style="font-weight: normal"><span id = "wizard">Wizard</span></h1></div>
+            <button type = "button" class="collapsible" id = "wizard_summary" onclick="collapse('wizard_summary')">Class Summary</button>
+            <div class="collapsible_content">
+                <h4>
+                    General Flavor
+                </h4>
+                <p>
+                    Studious magician, who learns powerful spells of all kinds
+                </p>
+                <h4>
+                    Ability Summary
+                </h4>
+                <p>
+                    Full Spellcaster [Damage Buffs, Control, Utility]
+                </p>
+                <p>
+                    Many Spells
+                </p>
+                <p>
+                    Free-Cast Spells With Extra Time
+                </p>
+            </div>
+            <button type = "button" class="collapsible" id = "wizard_flavor" onclick="collapse('wizard_flavor')">Class Flavor</button>
+            <div class="collapsible_content">
+                <p>
+                    Clad in the silver robes that denote her station, an elf closes 
+                    her eyes to shut out the distractions of the battlefield and 
+                    begins her quiet chant. Fingers weaving in front her, she completes 
+                    her spell and launches a tiny bead of fire toward the enemy ranks, 
+                    where it erupts into a conflagration that engulfs the soldiers.
+                </p>
+                <p>
+                    Checking and rechecking his work, a human scribes an intricate 
+                    magic circle in chalk on the bare stone floor, then sprinkles 
+                    powdered iron along every line and graceful curve. When the circle 
+                    is complete, he drones a long incantation. A hole opens in space 
+                    inside the circle, bringing a stale whiff of air from the 
+                    otherworldly plane beyond.
+                </p>
+                <p>
+                    Crouching on the floor in a dungeon intersection, a gnome tosses 
+                    a handful of bones inscribed with symbols, muttering words of 
+                    power over them. Closing his eyes to see the visions more clearly, 
+                    he nods slowly, then opens his eyes and points down the passage 
+                    to his left.
+                </p>
+                <p>
+                    Wizards are supreme magic-users, defined and united as a class 
+                    by the spells they cast. Drawing on the subtle weave of magic 
+                    that permeates the cosmos, wizards cast spells of explosive fire, 
+                    arcing lightning, subtle deception, and brute-force mind control. 
+                    Their magic conjures monsters from other planes of existence, 
+                    glimpses the future, or turns slain foes into zombies. Their 
+                    mightiest spells change one substance into another, call meteors 
+                    down from the sky, or open portals to other worlds.
+                </p>
+                <h4>
+                    Scholars of the Arcane
+                </h4>
+                <p>
+                    Wild and enigmatic, varied in form and function, the power of 
+                    magic draws students who seek to master its mysteries. Some 
+                    aspire to become like the gods, shaping reality itself. Though 
+                    the casting of a typical spell requires merely the utterance 
+                    of a few strange words, fleeting gestures, and sometimes a pinch 
+                    or clump of exotic materials, these surface components barely 
+                    hint at the expertise attained after years of apprenticeship 
+                    and countless hours of study.
+                </p>
+                <p>
+                    Wizards live and die by their spells. Everything else is secondary. 
+                    They learn new spells as they experiment and grow in experience. 
+                    They can also learn them from other wizards, from ancient tomes 
+                    or inscriptions, and from ancient creatures (such as the fey) 
+                    that are steeped in magic.
+                </p>
+                <h4>
+                    The Lure of Knowledge
+                </h4>
+                <p>
+                    Wizards' lives are seldom mundane. The closest a wizard is likely 
+                    to come to an ordinary life is working as a sage or lecturer in a 
+                    library or university, teaching others the secrets of the multiverse. 
+                    Other wizards sell their services as diviners, serve in military 
+                    forces, or pursue lives of crime or domination.
+                </p>
+                <p>
+                    But the lure of knowledge and power calls even the most unadventurous 
+                    wizards out of the safety of their libraries and laboratories and into 
+                    crumbling ruins and lost cities. Most wizards believe that their 
+                    counterparts in ancient civilizations knew secrets of magic that have 
+                    been lost to the ages, and discovering those secrets could unlock the 
+                    path to a power greater than any magic available in the present age.
+                </p>
+                <h4>
+                    Creating a Wizard
+                </h4>
+                <p>
+                    Creating a wizard character demands a backstory dominated by at least 
+                    one extraordinary event. How did your character first come into contact 
+                    with magic? How did you discover you had an aptitude for it? Do you 
+                    have a natural talent, or did you simply study hard and practice 
+                    incessantly? Did you encounter a magical creature or an ancient tome 
+                    that taught you the basics of magic?
+                </p>
+                <p>
+                    What drew you forth from your life of study? Did your first taste of 
+                    magical knowledge leave you hungry for more? Have you received word 
+                    of a secret repository of knowledge not yet plundered by another 
+                    wizard? Perhaps you're simply eager to put your newfound magical 
+                    skills to the test in the face of danger.
+                </p>
+            </div>
+            <div class="center_content">
+                <p>
+                    <em>You must have an Intelligence score of 13 or higher 
+                    in order to multiclass into this class.</em>
+                </p>
+            </div>
+            <table class = "class_table">
+                <tr class="class_table_header_row">
+                    <th colspan="4">The Wizard</th>
+                    <th colspan="9">Spell Slots per Spell Level</th>
+                </tr>
+                <tr class="class_table_header_row">
+                    <th>Level</th>
+                    <th>Proficiency Bonus</th>
+                    <th>Features</th>
+                    <th>Cantrips Known</th>
+                    <th>1st</th>
+                    <th>2nd</th>
+                    <th>3rd</th>
+                    <th>4th</th>
+                    <th>5th</th>
+                    <th>6th</th>
+                    <th>7th</th>
+                    <th>8th</th>
+                    <th>9th</th>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>1st</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#spellcasting">Spellcasting</a>,
+                        <a class="body_link" href="#arcane_recovery">Arcane Recovery</a>
+                    </td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>2nd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#arcane_tradition">Arcane Tradition</a>
+                    </td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>3rd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#cantrip_formulas">Cantrip Formulas</a>
+                    </td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>4th</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>5th</td>
+                    <td>+3</td>
+                    <td>—</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>6th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#arcane_tradition">Arcane Tradition Feature</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>7th</td>
+                    <td>+3</td>
+                    <td>—</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>8th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>9th</td>
+                    <td>+4</td>
+                    <td>—</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>10th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#arcane_tradition">Arcane Tradition Feature</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>11th</td>
+                    <td>+4</td>
+                    <td>—</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>12th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>-</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>13th</td>
+                    <td>+5</td>
+                    <td>—</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>14th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#arcane_tradition">Arcane Tradition Feature</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>15th</td>
+                    <td>+5</td>
+                    <td>—</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>16th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>17th</td>
+                    <td>+6</td>
+                    <td>—</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>18th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#spell_mastery">Spell Mastery</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>19th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>20th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#archmage">Archmage</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <div class="center_content"><h1 style="font-weight: 600">
+                Class Features
+            </h1>
+            <p>
+                As a wizard, you gain the following class features.
+            </p>
+            <h3>
+                Hit Points
+            </h3>
+            <p>
+                <strong>Hit Dice:</strong> 1d6 per wizard level
+            </p>
+            <p>
+                <strong>Hit Points at 1st Level:</strong> 6 + your Constitution modifier
+            </p>
+            <p>
+                <strong>Hit Points at Higher Levels:</strong> 1d6 + your Constitution 
+                modifier per wizard level after 1st.
+            </p>
+            <h3>
+                Proficiencies
+            </h3>
+            <p>
+                <strong>Armor:</strong> None
+            </p>
+            <p>
+                <strong>Weapons:</strong> Clubs, daggers, darts, slings, quarterstaffs, light crossbows
+            </p>
+            <p>
+                <strong>Tools:</strong> None
+            </p>
+            <p>
+                <strong>Saving Throws:</strong> Intelligence, Wisdom
+            </p>
+            <p>
+                <strong>Skills:</strong> Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion
+            </p>
+            <h3>
+                Equipment
+            </h3>
+            <p>
+                You start with the following equipment, in addition to the equipment
+                granted by your background:
+                <ul>
+                    <li>(a) a quarterstaff or (b) a dagger</li>
+                    <li>(a) a component pouch or (b) an arcane focus</li>
+                    <li>(a) a scholar's pack or (b) an explorer's pack</li>
+                    <li>A spellbook</li>
+                </ul>
+                Alternatively, you can buy your own equipment, starting with 93 gp and 6 sp.
+            </p>
+            <h2 id="spellcasting">
+                Spellcasting
+            </h2>
+            <p>
+                As a student of arcane magic, you have a spellbook containing 
+                spells that show the first glimmerings of your true power. 
+            </p>
+            <h3>
+                Cantrips
+            </h3>
+            <p>
+                At 1st level, you know three cantrips of your choice from the 
+                <a class="body_link" href=/Spells/WizardSpellList.html>wizard spell list</a>.
+                You learn additional wizard cantrips of your choice at higher levels, 
+                as shown in the Cantrips Known column of the Wizard table.
+            </p>
+            <p>
+                When you gain a level in this class, you can replace one of the 
+                wizard cantrips you know with another cantrip from the 
+                <a class="body_link" href=/Spells/WizardSpellList.html>wizard spell list</a>.
+            </p>
+            <h3>
+                Spellbook
+            </h3>
+            <p>
+                At 1st level, you have a spellbook containing six 1st-level wizard 
+                spells of your choice. Your spellbook is the repository of the wizard 
+                spells you know, except your cantrips, which are fixed in your mind. The 
+                spells that you add to your spellbook as you gain levels reflect the arcane 
+                research you conduct on your own, as well as intellectual breakthroughs 
+                you have had about the nature of the multiverse. You might find other 
+                spells during your adventures. You could discover a spell recorded on a 
+                scroll in an evil wizard's chest, for example, or in a dusty tome in 
+                an ancient library.
+            </p>
+            <p>
+                <strong>Copying a Spell into the Book.</strong> When you find a wizard
+                spell of 1st level or higher, you can add it to your spellbook if it is
+                of a level for which you have spell slots and if you can spare the time
+                to decipher and copy it.
+            </p>
+            <p>
+                Copying a spell into your spellbook involves
+                reproducing the basic form of the spell, then deciphering the unique
+                system of notation used by the wizard who wrote it. You must practice
+                the spell until you understand the sounds or gestures required, then
+                transcribe it into your spellbook using your own notation.
+            </p>
+            <p>
+                For each level of the spell, the process takes 2 hours and costs 50 gp.
+                The cost represents material components you expend as you experiment
+                with the spell to master it, as well as the fine inks you need to record
+                it. Once you have spent this time and money, you can prepare the spell
+                just like your other spells.
+            </p>
+            <p>
+                <strong>Replacing the Book.</strong> You can copy a spell from your own
+                spellbook into another book—for example, if you want to make a backup
+                copy of your spellbook. This is just like copying a new spell into your
+                spellbook, but faster and easier, since you understand your own notation
+                and already know how to cast the spell. You need spend only 1 hour and
+                10 gp for each level of the copied spell.
+            </p>
+            <p>
+                If you lose your spellbook, you can use the same procedure to transcribe
+                the spells that you have prepared into a new spellbook. Filling out the
+                remainder of your spellbook requires you to find new spells to do so, as
+                normal. For this reason, many wizards keep backup spellbooks in a safe
+                place.
+            </p>
+            <p>
+                <strong>The Book's Appearance.</strong> Your spellbook is a unique
+                compilation of spells, with its own decorative flourishes and margin
+                notes. It might be a plain, functional leather volume that you received
+                as a gift from your master, a finely bound gilt-edged tome you found in
+                an ancient library, or even a loose collection of notes scrounged
+                together after you lost your previous spellbook in a mishap.
+            </p>
+            <h3>
+                Preparing and Casting Spells
+            </h3>
+            <p>
+                The Wizard table shows how many spell slots you have to cast your spells
+                of 1st level and higher. To cast one of these spells, you must expend a
+                slot of the spell's level or higher. You regain all expended spell slots
+                when you finish a long rest.
+            </p>
+            <p>
+                You prepare the list of wizard spells that are available for you to cast.
+                To do so, choose a number of wizard spells from your spellbook equal to
+                your Intelligence modifier + your wizard level (minimum of one spell).
+                The spells must be of a level for which you have spell slots.
+            </p>
+            <p>
+                For example, if you're a 3rd-level wizard, you have four 1st-level and
+                two 2nd-level spell slots. With an Intelligence of 16, your list of
+                prepared spells can include six spells of 1st or 2nd level, in any
+                combination, chosen from your spellbook. If you prepare the 1st-level
+                spell <a class="body_link" href=/Spells/WitchBolt.html>Witch Bolt</a>,
+                you can cast it using a 1st-level or a 2nd-level slot. Casting the spell
+                doesn't remove it from your list of prepared spells.
+            </p>
+            <p>
+                You can change your list of prepared spells when you finish a long rest.
+                Preparing a new list of wizard spells requires time spent studying your
+                spellbook and memorizing the incantations and gestures you must make to
+                cast the spell: at least 1 minute per spell level for each spell on your
+                list.
+            </p>
+            <h3>
+                Spellcasting Ability
+            </h3>
+            <p>
+                Intelligence is your spellcasting ability for your wizard spells, since 
+                you learn your spells through dedicated study and memorization. 
+                You use your Intelligence whenever a spell refers to your spellcasting 
+                ability. In addition, you use your Intelligence modifier when setting 
+                the saving throw DC for a wizard spell you cast and when making an 
+                attack roll with one.
+            </p>
+            <p>
+                <strong>Spell save DC</strong> = 8 + your proficiency bonus + your Intelligence modifier
+            </p>
+            <p>
+                <strong>Spell attack modifier</strong> = your proficiency bonus + your Intelligence modifier
+            </p>
+            <h3>
+                Ritual Casting
+            </h3>
+            <p>
+                You can cast a wizard spell as a ritual if that spell has the ritual tag 
+                and you have the spell in your spellbook. You don't need to have the spell 
+                prepared.
+            </p>
+            <h3>
+                Spellcasting Focus
+            </h3>
+            <p>
+                You can use an arcane focus as a spellcasting focus for your wizard spells.
+            </p>
+            <h3>
+                Learning Spells of 1st Level and Higher
+            </h3>
+            <p>
+                Each time you gain a wizard level, you can add two wizard spells of your 
+                choice to your spellbook for free. Each of these spells must be of a level 
+                for which you have spell slots, as shown on the Wizard table. On your 
+                adventures, you might find other spells that you can add to your spellbook.
+            </p>
+            <h2 id="arcane_recovery">
+                Arcane Recovery
+            </h2>
+            <p>
+                You have learned to regain some of your magical energy by studying your 
+                spellbook. Once per day when you finish a short rest, you can choose 
+                expended spell slots to recover. The spell slots can have a combined 
+                level that is equal to or less than half your wizard level (rounded up), 
+                and none of the slots can be 6th level or higher.
+            </p>
+            <p>
+                For example, if you're a 4th-level wizard, you can recover up to two 
+                levels worth of spell slots. You can recover either a 2nd-level spell 
+                slot or two 1st-level spell slots.
+            </p>
+            <h2 id="arcane_tradition">
+                Arcane Tradition
+            </h2>
+            <p>
+                At 2nd level, you choose an arcane tradition, shaping your practice 
+                of magic. Choose one of the traditions of
+                <a class="body_link" href=/Classes/Wizard/Abjuration.html>Abjuration</a>, 
+                <a class="body_link" href=/Classes/Wizard/Bladesinging.html>Bladesinging</a>, 
+                <a class="body_link" href=/Classes/Wizard/Chronurgy.html>Chronurgy</a>, 
+                <a class="body_link" href=/Classes/Wizard/Conjuration.html>Conjuration</a>, 
+                <a class="body_link" href=/Classes/Wizard/Divination.html>Divination</a>, 
+                <a class="body_link" href=/Classes/Wizard/Enchantment.html>Enchantment</a>, 
+                <a class="body_link" href=/Classes/Wizard/Evocation.html>Evocation</a>, 
+                <a class="body_link" href=/Classes/Wizard/Graviturgy.html>Graviturgy</a>, 
+                <a class="body_link" href=/Classes/Wizard/Illusion.html>Illusion</a>, 
+                <a class="body_link" href=/Classes/Wizard/Necromancy.html>Necromancy</a>, 
+                <a class="body_link" href=/Classes/Wizard/OrderOfScribes.html>the Order of Scribes</a>, 
+                <a class="body_link" href=/Classes/Wizard/Transmutation.html>Transmutation</a>, 
+                or <a class="body_link" href=/Classes/Wizard/WarMagic.html>War Magic</a>,
+                Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.
+            </p>
+            <h2 id="cantrip_formulas">
+                Cantrip Formulas
+            </h2>
+            <p>
+                At 3rd level, you have scribed a set of arcane formulas in your spellbook 
+                that you can use to formulate a cantrip in your mind. Whenever you finish 
+                a long rest and consult those formulas in your spellbook, you can replace 
+                one wizard cantrip you know with another cantrip from the 
+                <a class="body_link" href=/Spells/WizardSpellList.html>wizard spell list</a>.
+            </p>
+            <h2 id="ability_score_improvement">
+                Ability Score Improvement
+            </h2>
+            <p>
+                When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can 
+                increase one ability score of your choice by 2, increase two ability scores of 
+                your choice by 1, or gain one <a class="body_link" href=/Feats/Feats.html>feat</a> 
+                of your choice. As normal, you can't increase an ability score above 20 using this 
+                feature.
+            </p>
+            <h2 id="spell_mastery">
+                Spell Mastery
+            </h2>
+            <p>
+                At 18th level, you have achieved such mastery over certain spells that you can 
+                cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell 
+                that are in your spellbook. You can cast those spells at their lowest level without 
+                expending a spell slot when you have them prepared. If you want to cast either spell 
+                at a higher level, you must expend a spell slot as normal.
+            </p>
+            <p>
+                By spending 8 hours in study, you can exchange one or both of the spells you chose 
+                for different spells of the same levels.
+            </p>
+            <h2 id="archmage">
+                Archmage
+            </h2>
+            <p>
+                At 20th level, you have reached the peak of your studies.
+                You have every spell in your spellbook prepared.
+            </p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <div class="space"></div>
+</body>

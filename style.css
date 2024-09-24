@@ -148,8 +148,8 @@ h3 {
 
 ul, li { list-style-type: none; }*/
 body {
-    /*background-color: brown;*/
     justify-content: end;
+    margin: 0;
 }
 
 #List {
@@ -165,48 +165,222 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: rgb(186, 127, 18);
+    /*background-color: rgb(186, 127, 18);*/
+    /*background-color: #fcf8e3;*/
+    /*background-color: #faf2cc;*/
+    background-color: #908149;
+    white-space: pre-wrap;
+    flex-wrap: wrap;
+    text-wrap: balance;
 }
-a:link {
+/*#ffe68c for bright yellow*/
+a.header_link:link {
     text-decoration: none;
-    color: rgb(73, 73, 73);
+    /*color: rgb(73, 73, 73);*/
+    color: #ECE9E4;
 }
-a:visited {
+a.header_link:visited {
     text-decoration: none;
-    color: rgb(73, 73, 73);
+    /*color: rgb(73, 73, 73);*/
+    color: #ECE9E4;
 }
-a:hover {
-    text-decoration: underline;
-    color: rgb(73, 73, 73);
-}
-a:active {
+a.header_link:hover {
     text-decoration: none;
-    color: rgb(73, 73, 73);
+    /*color: rgb(73, 73, 73);*/
+    /*color: #f7f7f7;*/
+    color: #ffffff;
+}
+a.header_link:active {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    color: #ECE9E4;
 }
 
-#button_group {
+a.body_link:link {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    color: #908149;
+}
+a.body_link:visited {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    color: #908149;
+}
+a.body_link:hover {
+    text-decoration: underline;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #f7f7f7;*/
+    color: #625832;
+}
+a.body_link:active {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    color: #908149;
+}
+
+.content_block {
     display: flex;
-    width: 100%;
-    height: 100%;
     flex-direction: row;
     justify-content: space-evenly;
-    /*background-color: blue;*/
+    /*width: 100%;
+    height: 100%;*/
+    background-color: #ffe68c;
 }
 
-#barb_image {
-    content: url(assets/Barbarian.png);
+.center_content_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*width: 100%;
+    height: 100%;*/
+    background-color: #ffe68c;
+}
+
+.link_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0px 100px;
+    /*background-color: green;*/
+}
+
+.class_image {
     height: 100px;
+    padding: 5px 5px 5px 5px;
 }
 
-#barbarian {
+.class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10px;
+    width: 120px;
+}
+
+.header_element {
+    display: flex;
+    /*background-color: yellow;*/
+    vertical-align: middle;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.space {
+    background-color: white;
+    height: 50px;
+}
+
+.row_null {
+    float: left;
+}
+
+.row_center {
+    float: left;
+    width: 60%;
+    border-style: groove;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.header_link {
-    display: flex;
-    /*background-color: yellow;*/
-    vertical-align: middle;
-    align-items: center;
+.side_class_image {
+    height: 200px;
+    padding: 20px 5px 5px 5px;
 }
+
+.center_content {
+    width: 98%;
+}
+
+.side_class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    /*background-color: blue;*/
+}
+
+.spacer {
+    display: flex;
+    width: 0px;
+    /*background-color: blue;*/
+}
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border-top-style: solid;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .collapsible_content {
+    padding: 0 1%;
+    display: none;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    width: 98%;
+  }
+
+  table.class_table {
+    width: 100%
+  }
+
+  tr.class_table_header_row th {
+    background-color: #908149;
+  }
+
+  td {
+    border: 1pt solid black;
+  }
+
+  th, td {
+    padding: 4px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+
+html {
+    font-family: sans-serif;
+}
+
+p {
+    line-height: 1.5;
+    /*margin-top: 1rem;
+    margin-bottom: 1rem;*/
+}
+ul {
+    line-height: 1.5;
+}
+li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+h2 {
+    margin-bottom: 1rem;
+    margin-top: 1em;
+}*/

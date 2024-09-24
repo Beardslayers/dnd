@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>DND Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src = "/collapsible.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("/header.html"); 
+        });
+    </script> 
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="space"></div>
+    <div class = "center_content_block">
+        <div class="spacer"></div>
+        <div class="row_center">
+            <div class="center_content"><h1 style="font-weight: normal"><span id = "rogue">Rogue</span></h1></div>
+            <button type = "button" class="collapsible" id = "rogue_summary" onclick="collapse('rogue_summary')">Class Summary</button>
+            <div class="collapsible_content">
+                <h4>
+                    General Flavor
+                </h4>
+                <p>
+                    Stealthy skill expert who avoids damage, hides, and backstabs for large damage.
+                </p>
+                <h4>
+                    Ability Summary
+                </h4>
+                <p>
+                    Stealth and Speed
+                </p>
+                <p>
+                    Damage Reduction
+                </p>
+                <p>
+                    Expert Skills
+                </p>
+                <p>
+                    Large Backstab Damage
+                </p>
+            </div>
+            <button type = "button" class="collapsible" id = "rogue_flavor" onclick="collapse('rogue_flavor')">Class Flavor</button>
+            <div class="collapsible_content">
+                <p>
+                    Signaling for her companions to wait, a hobbit creeps 
+                    forward through the dungeon hall. She presses an ear to 
+                    the door, then pulls out a set of tools and picks the 
+                    lock in the blink of an eye. Then she disappears into 
+                    the shadows as her fighter friend moves forward to 
+                    kick the door open.
+                </p>
+                <p>
+                    A human lurks in the shadows of an alley while his accomplice 
+                    prepares for her part in the ambush. When their target—a 
+                    notorious slaver—passes the alleyway, the accomplice cries 
+                    out, the slaver comes to investigate, and the assassin's blade 
+                    cuts his throat before he can make a sound.
+                </p>
+                <p>
+                    Suppressing a giggle, a gnome waggles her fingers and magically 
+                    lifts the key ring from the guard's belt. In a moment, the keys 
+                    are in her hand, the cell door is open, and she and her companions 
+                    are free to make their escape.
+                </p>
+                <p>
+                    Rogues rely on skill, stealth, and their foes' vulnerabilities to 
+                    get the upper hand in any situation. They have a knack for finding 
+                    the solution to just about any problem, demonstrating a 
+                    resourcefulness and versatility that is the cornerstone of any 
+                    successful adventuring party.
+                </p>
+                <h4>
+                    Skill and Precision
+                </h4>
+                <p>
+                    Rogues devote as much effort to mastering the use of a variety of 
+                    skills as they do to perfecting their combat abilities, giving 
+                    them a broad expertise that few other characters can match. Many 
+                    rogues focus on stealth and deception, while others refine the 
+                    skills that help them in a dungeon environment, such as climbing, 
+                    finding and disarming traps, and opening locks.
+                </p>
+                <p>
+                    When it comes to combat, rogues prioritize cunning over brute 
+                    strength. A rogue would rather make one precise strike, placing 
+                    it exactly where the attack will hurt the target most, than wear 
+                    an opponent down with a barrage of attacks. Rogues have an almost 
+                    supernatural knack for avoiding danger, and a few learn magical 
+                    tricks to supplement their other abilities.
+                </p>
+                <h4>
+                    A Shady Living
+                </h4>
+                <p>
+                    Every town and city has its share of rogues. Most of them live up 
+                    to the worst stereotypes of the class, making a living as burglars, 
+                    assassins, cutpurses, and con artists. Often, these scoundrels are 
+                    organized into thieves' guilds or crime families. Plenty of rogues 
+                    operate independently, but even they sometimes recruit apprentices 
+                    to help them in their scams and heists. A few rogues make an honest 
+                    living as locksmiths, investigators, or exterminators, which can be 
+                    a dangerous job in a world where dire rats—and wererats—haunt the sewers.
+                </p>
+                <p>
+                    As adventurers, rogues fall on both sides of the law. Some are hardened 
+                    criminals who decide to seek their fortune in treasure hoards, while 
+                    others take up a life of adventure to escape from the law. Some have 
+                    learned and perfected their skills with the explicit purpose of 
+                    infiltrating ancient ruins and hidden crypts in search of treasure.
+                </p>
+                <h4>
+                    Creating a Rogue
+                </h4>
+                <p>
+                    As you create your rogue character, consider the character's 
+                    relationship to the law. Do you have a criminal past—or present? Are 
+                    you on the run from the law or from an angry thieves' guild master? 
+                    Or did you leave your guild in search of bigger risks and bigger 
+                    rewards? Is it greed that drives you in your adventures, or some 
+                    other desire or ideal?
+                </p>
+                <p>
+                    What was the trigger that led you away from your previous life? 
+                    Did a great con or heist gone terribly wrong cause you to reevaluate 
+                    your career? Maybe you were lucky and a successful robbery gave you 
+                    the coin you needed to escape the squalor of your life. Did wanderlust 
+                    finally call you away from your home? Perhaps you suddenly found 
+                    yourself cut off from your family or your mentor, and you had to 
+                    find a new means of support. Or maybe you made a new friend—another 
+                    member of your adventuring party—who showed you new possibilities 
+                    for earning a living and employing your particular talents.
+                </p>
+            </div>
+            <div class="center_content"><p>
+                <em>
+                    You must have a Dexterity score of 13 or 
+                    higher in order to multiclass into this class.
+                </em>
+            </p></div>
+            <table class = "class_table">
+                <tr class="class_table_header_row">
+                    <th colspan="4">The Rogue</th>
+                </tr>
+                <tr class="class_table_header_row">
+                    <th>Level</th>
+                    <th>Proficiency Bonus</th>
+                    <th>Features</th>
+                    <th>Sneak Attack</th>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>1st</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#expertise">Expertise</a>,
+                        <a class="body_link" href="#sneak_attack">Sneak Attack</a>,
+                        <a class="body_link" href="#thieves_cant">Thieves' Cant</a>
+                    </td>
+                    <td>1d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>2nd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#cunning_action">Cunning Action</a>
+                    </td>
+                    <td>1d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>3rd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#roguish_archetype">Roguish Archetype</a>,
+                        <a class="body_link" href="#steady_aim">Steady Aim</a>
+                    </td>
+                    <td>2d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>4th</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>2d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>5th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#uncanny_dodge">Uncanny Dodge</a>
+                    </td>
+                    <td>3d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>6th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#expertise">Expertise</a>
+                    </td>
+                    <td>3d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>7th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#evasion">Evasion</a>
+                    </td>
+                    <td>4d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>8th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>4d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>9th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#roguish_archetype">Roguish Archetype Feature</a>
+                    </td>
+                    <td>5d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>10th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>5d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>11th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#reliable_talent">Reliable Talent</a>
+                    </td>
+                    <td>6d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>12th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>6d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>13th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#roguish_archetype">Roguish Archetype Feature</a>
+                    </td>
+                    <td>7d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>14th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#blindsense">Blindsense</a>
+                    </td>
+                    <td>7d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>15th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#slippery_mind">Slippery Mind</a>
+                    </td>
+                    <td>8d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>16th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>8d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>17th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#roguish_archetype">Roguish Archetype Feature</a>
+                    </td>
+                    <td>9d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>18th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#elusive">Elusive</a>
+                    </td>
+                    <td>9d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>19th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>10d6</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>20th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#successful_maverick">Successful Maverick</a>
+                    </td>
+                    <td>10d6</td>
+                </tr>
+            </table>
+            <div class="center_content"><h1 style="font-weight: 600">
+                Class Features
+            </h1>
+            <p>
+                As a rogue, you gain the following class features.
+            </p>
+            <h3>
+                Hit Points
+            </h3>
+            <p>
+                <strong>Hit Dice:</strong> 1d8 per rogue level
+            </p>
+            <p>
+                <strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier
+            </p>
+            <p>
+                <strong>Hit Points at Higher Levels:</strong> 1d8 + your Constitution 
+                modifier per rogue level after 1st.
+            </p>
+            <h3>
+                Proficiencies
+            </h3>
+            <p>
+                <strong>Armor:</strong> Light armor
+            </p>
+            <p>
+                <strong>Weapons:</strong> Simple weapons, hand crossbows, longswords, rapiers, shortswords
+            </p>
+            <p>
+                <strong>Tools:</strong> Thieves' Tools
+            </p>
+            <p>
+                <strong>Saving Throws:</strong> Dexterity, Intelligence
+            </p>
+            <p>
+                <strong>Skills:</strong> Choose four from Acrobatics, Athletics, 
+                Deception, Insight, Intimidation, Investigation, Perception, 
+                Performance, Persuasion, Sleight of Hand, and Stealth
+            </p>
+            <h3>
+                Equipment
+            </h3>
+            <p>
+                You start with the following equipment, in addition to the equipment
+                granted by your background:
+                <ul>
+                    <li>(a) a rapier or (b) a shortsword</li>
+                    <li>(a) a shortbow and quiver of 20 arrows or (b) a shortsword</li>
+                    <li>(a) a burglar's pack, (b) a dungeoneer's pack, or (c) an explorer's pack</li>
+                    <li>Leather armor, two daggers, and thieves' tools</li>
+                </ul>
+                Alternatively, you can buy your own equipment, starting with 87 gp, 6 sp, and 7 cp.
+            </p>
+            <h2 id="expertise">
+                Expertise
+            </h2>
+            <p>
+                At 1st level, choose two of your skill proficiencies, or one 
+                of your skill proficiencies and your thieves' tools proficiency. 
+                Your proficiency bonus is doubled for any ability check you make 
+                that uses either proficiency. At 6th level, you can choose two 
+                more proficiencies to gain this benefit.
+            </p>
+            <p>
+                When you gain a level in this class, you can replace one of your 
+                choices for Expertise with a different Expertise.
+            </p>
+            <h2 id="sneak_attack">
+                Sneak Attack
+            </h2>
+            <p>
+                Beginning at 1st level, you know how to strike subtly and exploit 
+                a foe's distraction. Once per turn, you can deal an extra 1d6 to 
+                one creature you hit with an attack if you have advantage on the 
+                attack roll. The attack must use a finesse or a ranged weapon.
+            </p>
+            <p>
+                You don't need advantage on the attack roll if another enemy of 
+                the target is within 5 feet of it, that enemy isn't incapacitated, 
+                and you don't have disadvantage on the attack roll.
+            </p>
+            <p>
+                The amount of the extra damage increases as you gain levels in 
+                this class, as shown in the Sneak Attack column of the Rogue table.
+            </p>
+            <h2 id="thieves_cant">
+                Thieves' Cant
+            </h2>
+            <p>
+                During your rogue training, you learned thieves' cant, a secret 
+                mix of dialect, jargon, and code that allows you to hide messages 
+                in seemingly normal conversation. Only another creature that knows 
+                thieves' cant understands such messages. It takes four times longer 
+                to convey such a message than it does to speak the same idea plainly.
+            </p>
+            <p>
+                In addition, you understand a set of secret signs and symbols used 
+                to convey short, simple messages, such as whether an area is dangerous 
+                or the territory of a thieves' guild, whether loot is nearby, or whether 
+                the people in an area are easy marks or will provide a safe house.
+            </p>
+            <h2 id="cunning_action">
+                Cunning Action
+            </h2>
+            <p>
+                Starting at 2nd level, your quick thinking and agility allow you to 
+                move and act quickly. You can take a bonus action on each of your turns 
+                in combat. This action can be used only to take the Dash, Disengage, 
+                or Hide action.
+            </p>
+            <h2 id="roguish_archetype">
+                Roguish Archetype
+            </h2>
+            <p>
+                At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities.
+                Choose one of the archetypes of
+                <a class="body_link" href=/Classes/Rogue/ArcaneTrickster.html>Arcane Trickster</a>, 
+                <a class="body_link" href=/Classes/Rogue/Inquisitive.html>Inquisitive</a>, 
+                <a class="body_link" href=/Classes/Rogue/Mastermind.html>Mastermind</a>, 
+                <a class="body_link" href=/Classes/Rogue/Ninja.html>Ninja</a>, 
+                <a class="body_link" href=/Classes/Rogue/Phantom.html>Phantom</a>, 
+                <a class="body_link" href=/Classes/Rogue/Scout.html>Scout</a>, 
+                <a class="body_link" href=/Classes/Rogue/Soulknife.html>Soulknife</a>, 
+                <a class="body_link" href=/Classes/Rogue/Swashbuckler.html>Swashbuckler</a>, 
+                or <a class="body_link" href=/Classes/Rogue/Thief.html>Thief</a>, 
+                Your choice grants you features at 3rd level and then again at 9th, 13th, and 17th level.
+            </p>
+            <h2 id="steady_aim">
+                Steady Aim
+            </h2>
+            <p>
+                At 3rd level, as a bonus action, you can give yourself advantage on 
+                your next attack roll on the current turn. You can use this bonus 
+                action only if you haven't moved during this turn, and after you 
+                use the bonus action, your speed is 0 until the end of the current 
+                turn.
+            </p>
+            <h2 id="ability_score_improvement">
+                Ability Score Improvement
+            </h2>
+            <p>
+                When you reach 4th level, and again at 8th, 10th, 12th, 16th, and 19th level, 
+                you can increase one ability score of your choice by 2, increase two ability scores of 
+                your choice by 1, or gain one <a class="body_link" href=/Feats/Feats.html>feat</a> 
+                of your choice. As normal, you can't increase an ability score above 20 using this 
+                feature.
+            </p>
+            <h2 id="uncanny_dodge">
+                Uncanny Dodge
+            </h2>
+            <p>
+                Starting at 5th level, when an attacker that you can see hits you with an 
+                attack, you can use your reaction to halve the attack's damage against you.
+            </p>
+            <h2 id="evasion">
+                Evasion
+            </h2>
+            <p>
+                Beginning at 7th level, you can nimbly dodge out of the way of certain area 
+                effects, such as a red dragon's fiery breath or an ice storm spell. When you 
+                are subjected to an effect that allows you to make a Dexterity saving throw 
+                to take only half damage, you instead take no damage if you succeed on the 
+                saving throw, and only half damage if you fail.
+            </p>
+            <h2 id="reliable_talent">
+                Reliable Talent
+            </h2>
+            <p>
+                By 11th level, you have refined your chosen skills until they approach 
+                perfection. Whenever you make an ability check that lets you add your 
+                proficiency bonus, you can treat a d20 roll of 9 or lower as a 10.
+            </p>
+            <h2 id="blindsense">
+                Blindsense
+            </h2>
+            <p>
+                Starting at 14th level, you gain 15 feet of blindsight.
+            </p>
+            <h2 id="slippery_mind">
+                Slippery Mind
+            </h2>
+            <p>
+                By 15th level, you have acquired greater mental strength. You gain proficiency 
+                in Wisdom saving throws.
+            </p>
+            <h2 id="elusive">
+                Elusive
+            </h2>
+            <p>
+                Beginning at 18th level, you are so evasive that attackers rarely gain the upper 
+                hand against you. No attack roll has advantage against you while you aren't 
+                incapacitated.
+            </p>
+            <h2 id="successful_maverick">
+                Successful Maverick
+            </h2>
+            <p>
+                At 20th level, you have an marvelous knack for succeeding when you need to. If 
+                you miss with an attack roll, fail an ability check, or fail a saving throw, you
+                can turn the d20 roll into a 20.
+            </p>
+            <p>
+                Once you use this feature, you can't use it again until you finish a short or 
+                long rest.
+            </p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <div class="space"></div>
+</body>

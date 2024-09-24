@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>DND Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src = "/collapsible.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("/header.html"); 
+        });
+    </script> 
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="space"></div>
+    <div class = "center_content_block">
+        <div class="spacer"></div>
+        <div class="row_center">
+            <div class="center_content"><h1 style="font-weight: normal"><span id = "cleric">Cleric</span></h1></div>
+            <button type = "button" class="collapsible" id = "cleric_summary" onclick="collapse('cleric_summary')">Class Summary</button>
+            <div class="collapsible_content">
+                <h4>
+                    General Flavor
+                </h4>
+                <p>
+                    God-following magician who wears good armor and has powerful damage and healing magic.
+                </p>
+                <h4>
+                    Ability Summary
+                </h4>
+                <p>
+                    Full Spellcaster [Damage, Powerful Healing, Resurrection]
+                </p>
+                <p>
+                    Good Armor
+                </p>
+                <p>
+                    Destroy Undead
+                </p>
+                <p>
+                    Call Divine Intervention
+                </p>
+            </div>
+            <button type = "button" class="collapsible" id = "cleric_flavor" onclick="collapse('cleric_flavor')">Class Flavor</button>
+            <div class="collapsible_content">
+                <p>
+                    Arms and eyes upraised toward the sun and a prayer on his lips, 
+                    an elf begins to glow with an inner light that spills out to 
+                    heal his battle-worn companions.
+                </p>
+                <p>
+                    Chanting a song of glory, a dwarf swings his axe in wide swaths 
+                    to cut through the ranks of orcs arrayed against him, shouting 
+                    praise to the gods with every foe's fall.
+                </p>
+                <p>
+                    Calling down a curse upon the forces of undeath, a human lifts 
+                    her holy symbol as light pours from it to drive back the zombies 
+                    crowding in on her companions.
+                </p>
+                <p>
+                    Clerics are intermediaries between the mortal world and the distant 
+                    planes of the gods. As varied as the gods they serve, clerics strive 
+                    to embody the handiwork of their deities. No ordinary priest, a cleric 
+                    is imbued with divine magic.
+                </p>
+                <p>
+                    Some serve gods as agents of healing and magic, while others serve the
+                    will of their deities as warriors. Regardless of their chosen path,
+                    each cleric is a conduit for the power of the divine, and the mere
+                    whiff of a cleric's presence can bring terror to the forces that 
+                    oppose them.
+                </p>
+                <h4>
+                    Healers and Warriors
+                </h4>
+                <p>
+                    Divine magic, as the name suggests, is the power of the gods, flowing 
+                    from them into the world. Clerics are conduits for that power, 
+                    manifesting it as miraculous effects. The gods don't grant this power 
+                    to everyone who seeks it, but only to those chosen to fulfill a high 
+                    calling. Harnessing divine magic doesn't rely on study or training.
+                    A cleric might learn formulaic prayers and ancient rites, but the 
+                    ability to cast cleric spells relies on devotion and an intuitive 
+                    sense of a deity's wishes.
+                </p>
+                <p>
+                    Clerics combine the helpful magic of healing and inspiring their 
+                    allies with spells that harm and hinder foes. They can provoke 
+                    awe and dread, lay curses of plague or poison, and even call down 
+                    flames from heaven to consume their enemies. For those evildoers 
+                    who will benefit most from a mace to the head, clerics depend on 
+                    their combat training to let them wade into melee with the power 
+                    of the gods on their side.
+                </p>
+                <h4>
+                    Divine Agents
+                </h4>
+                <p>
+                    Not every acolyte or officiant at a temple or shrine is a cleric. 
+                    Some priests are called to a simple life of temple service, carrying 
+                    out their gods' will through prayer and sacrifice, not by magic 
+                    and strength of arms. In some cities, priesthood amounts to a 
+                    political office, viewed as a stepping stone to higher positions of 
+                    authority and involving no communion with a god at all. True clerics 
+                    are rare in most hierarchies.
+                </p>
+                <p>
+                    When a cleric takes up an adventuring life, it is usually because 
+                    his or her god demands it. Pursuing the goals of the gods often 
+                    involves braving dangers beyond the walls of civilization, smiting 
+                    evil or seeking holy relics in ancient tombs. Many clerics are also 
+                    expected to protect their deities' worshippers, which can mean 
+                    fighting rampaging orc, negotiating peace between warring nations, 
+                    or sealing a portal that would allow a prince of aberrations to enter 
+                    the world. Most adventuring clerics maintain some connection to 
+                    established temples and orders of their faiths. A temple might ask 
+                    for a cleric's aid, or a high priest might be in a position to demand it.
+                </p>
+                <h4>
+                    Creating a Cleric
+                </h4>
+                <p>
+                    As you create a cleric, the most important question to consider is which 
+                    deity or domain to serve and what principles your character will embody. 
+                </p>
+                <p>
+                    Once you've chosen a deity or a domain, consider your cleric's relationship 
+                    to that god or domain. Did you enter this service willingly? Or did a god 
+                    choose you, impelling you into service with no regard for your wishes? How 
+                    do the temple priests of your faith regard you: as a champion or a troublemaker? 
+                    What are your ultimate goals? Does your deity have a special task in mind for 
+                    you? Or are you striving to prove yourself worthy of a great quest?
+                </p>
+            </div>
+            <div class="center_content"><p>
+                <em>
+                    You must have an Wisdom score of 13 or 
+                    higher in order to multiclass into this class.
+                </em>
+            </p></div>
+            <table class = "class_table">
+                <tr class="class_table_header_row">
+                    <th colspan="4">The Cleric</th>
+                    <th colspan="9">Spell Slots per Spell Level</th>
+                </tr>
+                <tr class="class_table_header_row">
+                    <th>Level</th>
+                    <th>Proficiency Bonus</th>
+                    <th>Features</th>
+                    <th>Cantrips Known</th>
+                    <th>1st</th>
+                    <th>2nd</th>
+                    <th>3rd</th>
+                    <th>4th</th>
+                    <th>5th</th>
+                    <th>6th</th>
+                    <th>7th</th>
+                    <th>8th</th>
+                    <th>9th</th>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>1st</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#spellcasting">Spellcasting</a>,
+                        <a class="body_link" href="#divine_domain">Divine Domain</a>
+                    </td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>2nd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#channel_divinity">Channel Divinity (1/rest)</a>,
+                        <a class="body_link" href="#divine_domain">Divine Domain Feature</a>
+                    </td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>3rd</td>
+                    <td>+2</td>
+                    <td>—</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>4th</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>5th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#destroy_undead">Destroy Undead (CR 1/2)</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>6th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#channel_divinity">Channel Divinity (2/rest)</a>,
+                        <a class="body_link" href="#divine_domain">Divine Domain Feature</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>7th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#divine_combat">Divine Combat</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>8th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>, 
+                        <a class="body_link" href="#destroy_undead">Destroy Undead (CR 1)</a>
+                    </td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>9th</td>
+                    <td>+4</td>
+                    <td>—</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>10th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#divine_intervention">Divine Intervention</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>11th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#destroy_undead">Destroy Undead (CR 2)</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>12th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>13th</td>
+                    <td>+5</td>
+                    <td>—</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>14th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#destroy_undead">Destroy Undead (CR 3)</a>, 
+                        <a class="body_link" href="#improved_divine_combat">Improved Divine Combat</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>15th</td>
+                    <td>+5</td>
+                    <td>—</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>16th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>17th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#destroy_undead">Destroy Undead (CR 4)</a>,
+                        <a class="body_link" href="#divine_domain">Divine Domain Feature</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>18th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#channel_divinity">Channel Divinity (3/rest)</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>19th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>20th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#destroy_undead">Destroy Undead (CR 5)</a>,
+                        <a class="body_link" href="#exalted_priest">Exalted Priest</a>
+                    </td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <div class="center_content"><h1 style="font-weight: 600">
+                Class Features
+            </h1>
+            <p>
+                As a cleric, you gain the following class features.
+            </p>
+            <h3>
+                Hit Points
+            </h3>
+            <p>
+                <strong>Hit Dice:</strong> 1d8 per cleric level
+            </p>
+            <p>
+                <strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier
+            </p>
+            <p>
+                <strong>Hit Points at Higher Levels:</strong> 1d8 + your Constitution 
+                modifier per cleric level after 1st.
+            </p>
+            <h3>
+                Proficiencies
+            </h3>
+            <p>
+                <strong>Armor:</strong> Light armor, medium armor, shields
+            </p>
+            <p>
+                <strong>Weapons:</strong> All simple weapons
+            </p>
+            <p>
+                <strong>Tools:</strong> None
+            </p>
+            <p>
+                <strong>Saving Throws:</strong> Wisdom, Charisma
+            </p>
+            <p>
+                <strong>Skills:</strong> Choose two from History, Insight, Medicine, Persuasion, and Religion
+            </p>
+            <h3>
+                Equipment
+            </h3>
+            <p>
+                You start with the following equipment, in addition to the equipment
+                granted by your background:
+                <ul>
+                    <li>(a) a mace or (b) a warhammer (if proficient)</li>
+                    <li>(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)</li>
+                    <li>(a) a light crossbow and 20 bolts or (b) any simple weapon</li>
+                    <li>(a) a priest's pack or (b) an explorer's pack</li>
+                    <li>A shield and a holy symbol</li>
+                </ul>
+                Alternatively, you can buy your own equipment, starting with 99 gp, 1 sp, and 2 cp.
+            </p>
+            <h2 id="spellcasting">
+                Spellcasting
+            </h2>
+            <p>
+                As a conduit for divine power, you can cast cleric spells.
+            </p>
+            <h3>
+                Cantrips
+            </h3>
+            <p>
+                At 1st level, you know three cantrips of your choice from the 
+                <a class="body_link" href=/Spells/ClericSpellList.html>cleric spell list</a>. 
+                You learn additional cleric cantrips of your choice at higher levels, 
+                as shown in the Cantrips Known column of the Cleric table.
+            </p>
+            <p>
+                When you gain a level in this class, you can replace one of the 
+                cleric cantrips you know with another cantrip from the 
+                <a class="body_link" href=/Spells/ClericSpellList.html>cleric spell list</a>
+            </p>
+            <h3>
+                Preparing and Casting Spells
+            </h3>
+            <p>
+                The Cleric table shows how many spell slots you have to cast 
+                your spells of 1st level and higher. To cast one of these 
+                spells, you must expend a slot of the spell's level or higher. 
+                You regain all expended spell slots when you finish a long rest.
+            </p>
+            <p>
+                You prepare the list of cleric spells that are available for you 
+                to cast, choosing from the 
+                <a class="body_link" href=/Spells/ClericSpellList.html>cleric spell list</a>. 
+                When you do so, choose a number of cleric spells equal to your Wisdom 
+                modifier + your cleric level (minimum of one spell). The spells must be 
+                of a level for which you have spell slots.
+            </p>
+            <p>
+                For example, if you are a 3rd-level cleric, you have four 1st-level 
+                and two 2nd-level spell slots. With a Wisdom of 16, your list 
+                of prepared spells can include six spells of 1st or 2nd level, 
+                in any combination. If you prepare the 1st-level spell 
+                <a class="body_link" href=/Spells/CureWounds.html>Cure Wounds</a>, 
+                you can cast it using a 1st-level or 2nd-level slot. Casting the 
+                spell doesn't remove it from your list of prepared spells.
+            </p>
+            <p>
+                You can change your list of prepared spells when you finish a long rest. 
+                Preparing a new list of cleric spells requires time spent in prayer and 
+                meditation: at least 1 minute per spell level for each spell on your list.
+            </p>
+            <h3>
+                Spellcasting Ability
+            </h3>
+            <p>
+                Wisdom is your spellcasting ability for your cleric spells. The power 
+                of your spells comes from your devotion to your deity. You use you 
+                Wisdom whenever a cleric spell refers to your spellcasting ability. 
+                In addition, you use your Wisdom modifier when setting the saving 
+                throw DC for a cleric spell you cast and when making an attack roll 
+                with one.
+            </p>
+            <p>
+                <strong>Spell save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier
+            </p>
+            <p>
+                <strong>Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier
+            </p>
+            <h3>
+                Ritual Casting
+            </h3>
+            <p>
+                You can cast a cleric spell as a ritual if that spell has 
+                the ritual tag and you have the spell prepared.
+            </p>
+            <h3>
+                Spellcasting Focus
+            </h3>
+            <p>
+                You can use a holy symbol as a spellcasting focus for your cleric spells.
+            </p>
+            <h2 id="divine_domain">
+                Divine Domain
+            </h2>
+            <p>
+                At 1st level, you choose a domain that you serve, or that is related 
+                to the deity that you serve. Choose one of the domains of
+                <a class="body_link" href=/Classes/Cleric/Arcana.html>Arcana</a>, 
+                <a class="body_link" href=/Classes/Cleric/Death.html>Death</a>, 
+                <a class="body_link" href=/Classes/Cleric/Forge.html>Forge</a>, 
+                <a class="body_link" href=/Classes/Cleric/Grave.html>Grave</a>, 
+                <a class="body_link" href=/Classes/Cleric/Knowledge.html>Knowledge</a>, 
+                <a class="body_link" href=/Classes/Cleric/Life.html>Life</a>, 
+                <a class="body_link" href=/Classes/Cleric/Light.html>Light</a>, 
+                <a class="body_link" href=/Classes/Cleric/Mind.html>Mind</a>, 
+                <a class="body_link" href=/Classes/Cleric/Nature.html>Nature</a>, 
+                <a class="body_link" href=/Classes/Cleric/Order.html>Order</a>, 
+                <a class="body_link" href=/Classes/Cleric/Peace.html>Peace</a>, 
+                <a class="body_link" href=/Classes/Cleric/Tempest.html>Tempest</a>, 
+                <a class="body_link" href=/Classes/Cleric/Trickery.html>Trickery</a>, 
+                <a class="body_link" href=/Classes/Cleric/Twilight.html>Twilight</a>, 
+                <a class="body_link" href=/Classes/Cleric/War.html>War</a>, 
+                or <a class="body_link" href=/Classes/Cleric/Zeal.html>Zeal</a>, 
+                Your choice grants you domain spells and other features when you 
+                choose it at 1st level. It also grants you additional ways to use 
+                Channel Divinity when you gain that feature at 2nd level, 
+                specifies the damage type used for the Divine Combat feature, 
+                and grants additional benefits at 6th and 17th level.
+            </p>
+            <h3>
+                Domain Spells
+            </h3>
+            <p>
+                Each domain has a list of spells—its domain spells—that you gain 
+                at the cleric levels noted in the domain description. Once you 
+                gain a domain spell, you always have it prepared, and it doesn't 
+                count against the number of spells you can prepare each day.
+            </p>
+            <p>
+                If you have a domain spell that doesn't appear on the 
+                <a class="body_link" href=/Spells/ClericSpellList.html>cleric spell list</a>, 
+                the spell is nonetheless a cleric spell for you.
+            </p>
+            <h2 id="channel_divinity">
+                Channel Divinity
+            </h2>
+            <p>
+                At 2nd level, you gain the ability to channel divine energy directly 
+                from your deity, using that energy to fuel magical effects. You 
+                start with three such effects: Turn Undead, Harness Divine Power, 
+                and an effect determined by your domain. Some domains grant you 
+                additional effects as you advance in levels, as noted in the 
+                domain description.
+            </p>
+            <p>
+                When you use your Channel Divinity, you choose which effect to 
+                create. You must then finish a short or long rest to use your 
+                Channel Divinity again.
+            </p>
+            <p>
+                Some Channel Divinity effects require saving throws. When you use 
+                such an effect from this class, the DC equals your cleric spell 
+                save DC.
+            </p>
+            <p>
+                Beginning at 6th level, you can use your Channel Divinity twice 
+                between rests, and beginning at 18th level, you can use it three 
+                times between rests. When you finish a short or long rest, you 
+                regain your expended uses.
+            </p>
+            <h3>
+                Channel Divinity: Turn Undead
+            </h3>
+            <p>
+                As an action, you present your holy symbol and speak a prayer 
+                censuring the undead. Each undead that can see or hear you within 
+                30 feet of you must make a Wisdom saving throw. If the creature 
+                fails its saving throw, it is turned for 1 minute or until it 
+                takes any damage.
+            </p>
+            <p>
+                A turned creature must spend its turns trying to move as far away 
+                from you as it can, and it can't willingly move to a space within 
+                30 feet of you. It also can't take reactions. For its action, it 
+                can use only the Dash action or try to escape from an effect that 
+                prevents it from moving. If there's nowhere to move, the creature 
+                can use the Dodge action.
+            </p>
+            <h3>
+                Channel Divinity: Harness Divine Power
+            </h3>
+            <p>
+                As a bonus action, you can touch your holy symbol, utter a prayer, 
+                and regain one expended spell slot, the level of which can be no 
+                higher than half your proficiency bonus (rounded up). The number 
+                of times you can use this feature is based on the level you've 
+                reached in this class: 2nd level, once; 6th level, twice; and 
+                18th level, thrice. You regain all expended uses when you finish 
+                a long rest.
+            </p>
+            <h2 id="ability_score_improvement">
+                Ability Score Improvement
+            </h2>
+            <p>
+                When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can 
+                increase one ability score of your choice by 2, increase two ability scores of 
+                your choice by 1, or gain one <a class="body_link" href=/Feats/Feats.html>feat</a> 
+                of your choice. As normal, you can't increase an ability score above 20 using this 
+                feature.
+            </p>
+            <h2 id="destroy_undead">
+                Destroy Undead
+            </h2>
+            <p>
+                Starting at 5th level, when an undead fails its saving throw against 
+                your Turn Undead feature, the creature is instantly destroyed if its 
+                challenge rating is at or below a certain threshold, as shown in the 
+                Cleric table above.
+            </p>
+            <h2 id="divine_combat">
+                Divine Combat
+            </h2>
+            <p>
+                Starting at 7th level, divine power infuses you in battle. You 
+                gain one of the following options of your choice:
+            </p>
+            <h3>
+                Potent Blows
+            </h3>
+            <p>
+                Once on each of your turns when you hit a creature with a 
+                weapon attack, you can cause the attack to deal an extra 
+                1d8 damage to the target. The damage is of the type 
+                specified in your subclass.
+            </p>
+            <h3>
+                Potent Spells
+            </h3>
+            <p>
+                When you deal damage with a cantrip, you can add an 
+                amount of extra damage equal to your Wisdom modifier. 
+                The damage is of the type specified in your subclass.
+            </p>
+            <h2 id="divine_intervention">
+                Divine Intervention
+            </h2>
+            <p>
+                Beginning at 10th level, you can call on your deity to 
+                intervene on your behalf when your need is great.
+            </p>
+            <p>
+                Imploring your deity's aid requires you to use your action. 
+                Describe the assistance you seek, and roll percentile dice. 
+                If you roll a number equal to or lower than your cleric level, 
+                your deity intervenes. The GM chooses the nature of the 
+                intervention; the effect of any cleric spell or cleric domain 
+                spell would be appropriate. If your deity intervenes, you can't 
+                use this feature again for 7 days. Otherwise, you can use it 
+                again until after you finish a long rest.
+            </p>
+            <h2 id="improved_divine_combat">
+                Improved Divine Combat
+            </h2>
+            <p>
+                At 14th level, the option you chose for Divine Combat grows more powerful:
+            </p>
+            <h3>
+                Potent Blows
+            </h3>
+            <p>
+                The extra damage of your Potent Blows increases to 2d8.
+            </p>
+            <h3>
+                Potent Spells
+            </h3>
+            <p>
+                When you damage a creature with a cantrip, you can grant a number 
+                of temporary hit points equal to twice your Wisdom modifier to 
+                either yourself or a creature you choose within 60 feet of you.
+            </p>
+            <h2 id="exalted_priest">
+                Exalted Priest
+            </h2>
+            <p>
+                At 20th level, your bond with your deity is deep and powerful. 
+                When you use your Divine Intervention feature, your call for 
+                intervention succeeds automatically, no roll required.
+            </p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <div class="space"></div>
+</body>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>DND Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src = "/collapsible.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("/header.html"); 
+        });
+    </script> 
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="space"></div>
+    <div class = "center_content_block">
+        <div class="spacer"></div>
+        <div class="row_center">
+            <div class="center_content"><h1 style="font-weight: normal"><span id = "bard">Bard</span></h1></div>
+            <button type = "button" class="collapsible" id = "bard_summary" onclick="collapse('bard_summary')">Class Summary</button>
+            <div class="collapsible_content">
+                <h4>
+                    General Flavor
+                </h4>
+                <p>
+                    Artistic, charismatic magician who casts spells to help their teammates succeed.
+                </p>
+                <h4>
+                    Ability Summary
+                </h4>
+                <p>
+                    Full Spellcaster [Battlefield Control, Utility, Buffs, Moderate Healing, Resurrection]
+                </p>
+                <p>
+                    Roll Bonuses for Allies
+                </p>
+                <p>
+                    Decent at all Skills
+                </p>
+            </div>
+            <button type = "button" class="collapsible" id = "bard_flavor" onclick="collapse('bard_flavor')">Class Flavor</button>
+            <div class="collapsible_content">
+                <p>
+                    Humming as she traces her fingers over an ancient monument 
+                    in a long-forgotten ruin, a half-elf in rugged leathers 
+                    finds knowledge springing into her mind, conjured forth by 
+                    the magic of her song—knowledge of the people who constructed 
+                    the monument and the mythic saga it depicts.
+                </p>
+                <p>
+                    A stern human warrior whips his sword rhythmically through the 
+                    air, setting the tempo for his blade's strokes and exhorting 
+                    his companions to bravery and heroism. The magic of his graceful 
+                    movement fortifies and emboldens them.
+                </p>
+                <p>
+                    Laughing as she dons her actor's mask, a gnome weaves her subtle 
+                    magic over the assembled nobles, ensuring that her companions' 
+                    words will be well received.
+                </p>
+                <p>
+                    Whether scholar or scoundrel, sculptor or musician, a bard 
+                    weaves magic through art and performance to inspire allies, 
+                    demoralize foes, manipulate minds, create illusions, and even 
+                    heal wounds.
+                </p>
+                <p>
+                    For some, artistic power shows itself as physical creations,
+                    sculptures or paintings used to inspire power and shape the world.
+                    For others, the power is in the performance, the words and music
+                    that shape emotions and minds. Each bard, however, is a master of
+                    their chosen arts, channeling the magic of the world into their 
+                    artistic expression, and using their artistic expression to change 
+                    the world around them.
+                </p>
+                <h4>
+                    Music and Magic
+                </h4>
+                <p>
+                    In the worlds of D&D, art is not just vibrations of air or pleasing shapes,
+                    but conjurations with power all their own. The bard is a master of 
+                    creation, creativity, and the magic they contain. Bards say that the 
+                    multiverse was inspired into existence, that the visions of the gods 
+                    gave it shape, and that echoes of these First Inspirations 
+                    still resound throughout the cosmos. The artistry of bards is an attempt 
+                    to snatch and harness those echoes, woven into their spells.
+                </p>
+                <p>
+                    The greatest strength of bards is their sheer versatility. Many bards 
+                    prefer to stick to the sidelines in combat, using their magic to inspire 
+                    their allies and hinder their foes from a distance. But bards are capable 
+                    of defending themselves in melee if necessary, using their magic to bolster 
+                    their swords and armor. Their spells lean toward charms and illusions rather 
+                    than blatantly destructive spells. They have a wide-ranging knowledge of 
+                    many subjects and a natural aptitude that lets them do almost anything well. 
+                    Bards become masters of the talents they set their minds to perfecting, 
+                    from musical performance to esoteric knowledge.
+                </p>
+                <h4>
+                    Learning from Experience
+                </h4>
+                <p>
+                    True bards are not common in the world. Not every minstrel singing 
+                    in a tavern or jester cavorting in a royal court is a bard. 
+                    Discovering the magic hidden in art requires hard study and some measure 
+                    of natural talent that most troubadours and jongleurs lack. It can be hard 
+                    to spot the difference between these performers and true bards, though. 
+                    A bard's life is spent wandering across the land gathering inspiration, creating 
+                    art, and living on the gratitude of audiences, much like any other entertainer. 
+                    But a depth of knowledge, a level of artistic skill, and a touch of magic set 
+                    bards apart from their fellows.
+                </p>
+                <p>
+                    Only rarely do bards settle in one place for long, and their natural desire 
+                    to travel—to find new tales to tell, new skills to learn, and new discoveries 
+                    beyond the horizon—makes an adventuring career a natural calling. Every 
+                    adventure is an opportunity to learn, practice a variety of skills, enter 
+                    long-forgotten tombs, discover lost works of magic, decipher old tomes, 
+                    travel to strange places, or encounter exotic creatures. Bards love to 
+                    accompany heroes to witness their deeds firsthand. A bard who can tell an 
+                    awe-inspiring story from personal experience earns renown among other bards. 
+                    Indeed, after creating so many works of art about heroes accomplishing mighty 
+                    deeds, many bards take these themes to heart and assume heroic roles.
+                </p>
+                <h4>
+                    Creating a Bard
+                </h4>
+                <p>
+                    Bards thrive on stories, whether those stories are true or not. Your character's 
+                    background and motivations are not as important as the stories that he or she 
+                    tells about them. Perhaps you had a secure and mundane childhood. There's no good 
+                    story to be told about that, so you might paint yourself as an orphan raised by a 
+                    hag in a dismal swamp. Or your childhood might be worthy of a story. Some bards 
+                    acquire their magical art through extraordinary means, including the inspiration 
+                    of fey or other supernatural creatures.
+                </p>
+                <p>
+                    Did you serve an apprenticeship, studying under a master, following the more 
+                    experienced bard until you were ready to strike out on your own? Or did you 
+                    attend a college where you studied bardic lore and practiced your musical 
+                    magic? Perhaps you were a young runaway or orphan, befriended by a wandering 
+                    bard who became your mentor. Or you might have been a spoiled noble child tutored 
+                    by a master. Perhaps you stumbled into the clutches of a hag, making a bargain for 
+                    a musical gift in addition to your life and freedom, but at what cost?
+                </p>
+            </div>
+            <div class="center_content"><p>
+                <em>
+                    You must have an Charisma score of 13 or 
+                    higher in order to multiclass into this class.
+                </em>
+            </p></div>
+            <table class = "class_table">
+                <tr class="class_table_header_row">
+                    <th colspan="6">The Bard</th>
+                    <th colspan="9">Spell Slots per Spell Level</th>
+                </tr>
+                <tr class="class_table_header_row">
+                    <th>Level</th>
+                    <th>Proficiency Bonus</th>
+                    <th>Features</th>
+                    <th>Cantrips Known</th>
+                    <th>Spells Known</th>
+                    <th>1st</th>
+                    <th>2nd</th>
+                    <th>3rd</th>
+                    <th>4th</th>
+                    <th>5th</th>
+                    <th>6th</th>
+                    <th>7th</th>
+                    <th>8th</th>
+                    <th>9th</th>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>1st</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#spellcasting">Spellcasting</a>,
+                        <a class="body_link" href="#bardic_inspiration">Bardic Inspiration (d6)</a>
+                    </td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>2nd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#jack_of_all_trades">Jack of All Trades</a>,
+                        <a class="body_link" href="#song_of_rest">Song of Rest (1d6)</a>,
+                        <a class="body_link" href="#magical_inspiration">Magical Inspiration</a>,
+                    </td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>3rd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#bard_college">Bard College</a>,
+                        <a class="body_link" href="#expertise">Expertise</a>
+                    </td>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>4th</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>5th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#bardic_inspiration">Bardic Inspiration (d8)</a>, 
+                        <a class="body_link" href="#font_of_inspiration">Font of Inspiration</a>
+                    </td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>6th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#countercharm">Countercharm</a>, 
+                        <a class="body_link" href="#bard_college">Bard College Feature</a>
+                    </td>
+                    <td>3</td>
+                    <td>9</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>7th</td>
+                    <td>+3</td>
+                    <td>—</td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>8th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>9th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#song_of_rest">Song of Rest (2d6)</a>,
+                    </td>
+                    <td>3</td>
+                    <td>12</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>10th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#bardic_inspiration">Bardic Inspiration (d10)</a>, 
+                        <a class="body_link" href="#expertise">Expertise</a>, 
+                        <a class="body_link" href="#magical_secrets">Magical Secrets</a>
+                    </td>
+                    <td>4</td>
+                    <td>14</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>11th</td>
+                    <td>+4</td>
+                    <td>—</td>
+                    <td>4</td>
+                    <td>15</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>12th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>4</td>
+                    <td>15</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>-</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>13th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#song_of_rest">Song of Rest (3d6)</a>,
+                    </td>
+                    <td>4</td>
+                    <td>16</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>14th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#magical_secrets">Magical Secrets</a>, 
+                        <a class="body_link" href="#bard_college">Bard College Feature</a>
+                    </td>
+                    <td>4</td>
+                    <td>18</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>15th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#bardic_inspiration">Bardic Inspiration (d12)</a>
+                    </td>
+                    <td>4</td>
+                    <td>19</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>16th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>4</td>
+                    <td>19</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>17th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#song_of_rest">Song of Rest (4d6)</a>,
+                    </td>
+                    <td>4</td>
+                    <td>20</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>18th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#magical_secrets">Magical Secrets</a>
+                    </td>
+                    <td>4</td>
+                    <td>22</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>19th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                    <td>4</td>
+                    <td>22</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>20th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#transcendent_artist">Transcendent Artist</a>
+                    </td>
+                    <td>4</td>
+                    <td>22</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <div class="center_content"><h1 style="font-weight: 600">
+                Class Features
+            </h1>
+            <p>
+                As a bard, you gain the following class features.
+            </p>
+            <h3>
+                Hit Points
+            </h3>
+            <p>
+                <strong>Hit Dice:</strong> 1d8 per bard level
+            </p>
+            <p>
+                <strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier
+            </p>
+            <p>
+                <strong>Hit Points at Higher Levels:</strong> 1d8 + your Constitution 
+                modifier per bard level after 1st.
+            </p>
+            <h3>
+                Proficiencies
+            </h3>
+            <p>
+                <strong>Armor:</strong> Light armor
+            </p>
+            <p>
+                <strong>Weapons:</strong> Simple weapons, hand crossbows, longswords, rapiers, shortswords
+            </p>
+            <p>
+                <strong>Tools:</strong> Three musical instruments or artist's implements of your choice
+            </p>
+            <p>
+                <strong>Saving Throws:</strong> Dexterity, Charisma
+            </p>
+            <p>
+                <strong>Skills:</strong> Choose any three
+            </p>
+            <h3>
+                Equipment
+            </h3>
+            <p>
+                You start with the following equipment, in addition to the equipment
+                granted by your background:
+                <ul>
+                    <li>(a) a rapier, (b) a longsword, or (c) any simple weapon</li>
+                    <li>(a) a diplomat's pack, or (b) an entertainer's pack</li>
+                    <li>(a) a lute, (b) any other musical instrument, or (c) any artist's implements</li>
+                    <li>Leather armor and a dagger</li>
+                </ul>
+                Alternatively, you can buy your own equipment, starting with  91 gp, 7 sp, and 1 cp.
+            </p>
+            <h2 id="spellcasting">
+                Spellcasting
+            </h2>
+            <p>
+                You have learned to untangle and reshape the fabric of reality 
+                in harmony with your wishes and artistry. Your spells are part 
+                of your vast repertoire, magic that you can adjust to different 
+                situations. 
+            </p>
+            <h3>
+                Cantrips
+            </h3>
+            <p>
+                At 1st level, you know two cantrips of your choice from the 
+                <a class="body_link" href=/Spells/BardSpellList.html>bard spell list</a>.
+                You learn additional bard cantrips of your choice at higher levels, 
+                as shown in the Cantrips Known column of the Bard table.
+            </p>
+            <p>
+                When you gain a level in this class, you can replace one of the 
+                bard cantrips you know with another cantrip from the 
+                <a class="body_link" href=/Spells/BardSpellList.html>bard spell list</a>.
+            </p>
+            <h3>
+                Spell Slots
+            </h3>
+            <p>
+                The Bard table shows how many spell slots you have to cast your spells 
+                of 1st level and higher. To cast one of these spells, you must expend 
+                a slot of the spell's level or higher. You regain all expended spell 
+                slots when you finish a long rest. For example, if you know the 1st-level spell 
+                <a class="body_link" href=/Spells/CureWounds.html>Cure Wounds</a> 
+                and have a 1st-level and a 2nd-level spell slot available, 
+                you can cast 
+                <a class="body_link" href=/Spells/CureWounds.html>Cure Wounds</a>  
+                using either slot.
+            </p>
+            <h3>
+                Spells Known of 1st Level and Higher
+            </h3>
+            <p>
+                At 1st level, you know four 1st-level spells of your choice from the 
+                <a class="body_link" href=/Spells/BardSpellList.html>bard spell list</a>.
+            </p>
+            <p>
+                The Spells Known column of the Bard table shows when you learn more bard 
+                spells of your choice. Each of these spells must be of a level for which 
+                you have spell slots, as shown on the table. For instance, when you reach 
+                3rd level in this class, you can learn one new spell of 1st or 2nd level.
+            </p>
+            <p>
+                When you gain a level in this class, you can choose one of 
+                the bard spells you know and replace it with another spell from the 
+                <a class="body_link" href=/Spells/BardSpellList.html>bard spell list</a>, 
+                which also must be of a level for which you have spell slots.
+            </p>
+            <h3>
+                Spellcasting Ability
+            </h3>
+            <p>
+                Charisma is your spellcasting ability for your bard spells. Your magic 
+                comes from the heart and soul you pour into the performance of your music 
+                or oration. You use your Charisma whenever a spell refers to your spellcasting 
+                ability. In addition, you use your Charisma modifier when setting the saving 
+                throw DC for a bard spell you cast and when making an attack roll with one.
+            </p>
+            <p>
+                <strong>Spell save DC</strong> = 8 + your proficiency bonus + your Charisma modifier
+            </p>
+            <p>
+                <strong>Spell attack modifier</strong> = your proficiency bonus + your Charisma modifier
+            </p>
+            <h3>
+                Ritual Casting
+            </h3>
+            <p>
+                You can cast any bard spell you know as a ritual if that spell has the 
+                ritual tag.
+            </p>
+            <h3>
+                Spellcasting Focus
+            </h3>
+            <p>
+                You can use a musical instrument or artist's implements as a spellcasting 
+                focus for your bard spells.
+            </p>
+            <h2 id="bardic_inspiration">
+                Bardic Inspiration
+            </h2>
+            <p>
+                You can inspire others through your art. To do so, you use a bonus action 
+                on your turn to choose one creature other than yourself within 60 feet of 
+                you who can hear or see you. That creature gains one Bardic Inspiration die, 
+                a d6. A creature can have only one Bardic Inspiration die at a time.
+            </p>
+            <p>
+                Once within the next hour, when the creature fails an ability check, 
+                attack roll, or saving throw, it can roll the die and add the 
+                number rolled to the d20, potentially turning the failure into a success. 
+                Once the Bardic Inspiration die is rolled, it is lost. 
+            </p>
+            <p>
+                You can use this feature a number of times equal to your Charisma modifier 
+                (a minimum of once). You regain any expended uses when you finish a long rest.
+            </p>
+            <p>
+                Your Bardic Inspiration die changes when you reach certain levels in this class. 
+                The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level.
+            </p>
+            <h2 id="jack_of_all_trades">
+                Jack of All Trades
+            </h2>
+            <p>
+                Starting at 2nd level, you can add half your proficiency bonus, rounded down, 
+                to any ability check you make that doesn't already include your proficiency bonus.
+            </p>
+            <h2 id="song_of_rest">
+                Song of Rest
+            </h2>
+            <p>
+                Beginning at 2nd level, you can use soothing music, oration, or art to help 
+                revitalize your wounded allies during a short rest. If you or any 
+                friendly creatures who can see or hear your performance regain hit points 
+                at the end of the short rest, each of those creatures regains an extra 
+                1d6 hit points.
+            </p>
+            <p>
+                The extra hit points increase when you reach certain levels in this class: 
+                to 2d6 at 9th level, to 3d6 at 13th level, and to 4d6 at 17th level.
+            </p>
+            <h2 id="magical_inspiration">
+                Magical Inspiration
+            </h2>
+            <p>
+                At 2nd level, if a creature has a Bardic Inspiration die from you and 
+                casts a spell that restores hit points or deals damage, the creature 
+                can roll that die and choose a target affected by the spell. Add the 
+                number rolled as a bonus to the hit points regained or the damage dealt. 
+                The Bardic Inspiration die is then lost.
+            </p>
+            <h2 id="bard_college">
+                Bard College
+            </h2>
+            <p>
+                At 3rd level, you delve into the advanced techniques of 
+                a bard college of your choice. Choose one of the colleges of
+                <a class="body_link" href=/Classes/Bard/Conduction.html>Conduction</a>, 
+                <a class="body_link" href=/Classes/Bard/Creation.html>Creation</a>, 
+                <a class="body_link" href=/Classes/Bard/Edge.html>Edge</a>, 
+                <a class="body_link" href=/Classes/Bard/Eloquence.html>Eloquence</a>, 
+                <a class="body_link" href=/Classes/Bard/Glamour.html>Glamour</a>, 
+                <a class="body_link" href=/Classes/Bard/Legions.html>Legions</a>, 
+                <a class="body_link" href=/Classes/Bard/Lore.html>Lore</a>, 
+                <a class="body_link" href=/Classes/Bard/Swords.html>Swords</a>, 
+                <a class="body_link" href=/Classes/Bard/Tragedy.html>Tragedy</a>, 
+                or <a class="body_link" href=/Classes/Bard/Valor.html>Valor</a>, 
+                Your choice grants you features at 3rd level and again at 6th and 14th level.
+            </p>
+            <h2 id="expertise">
+                Expertise
+            </h2>
+            <p>
+                At 3rd level, choose two of your skill proficiencies. Your proficiency 
+                bonus is doubled for any ability check you make that uses either of the 
+                chosen proficiencies. 
+            </p>
+            <p>
+                At 10th level, you can choose another two skill proficiencies to gain 
+                this benefit.
+            </p>
+            <p>
+                When you gain a level in this class, you can choose 
+                a skill proficiency which has this benefit and replace it with 
+                another skill in which you are proficient.
+            </p>
+            <h2 id="ability_score_improvement">
+                Ability Score Improvement
+            </h2>
+            <p>
+                When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can 
+                increase one ability score of your choice by 2, increase two ability scores of 
+                your choice by 1, or gain one <a class="body_link" href=/Feats/Feats.html>feat</a> 
+                of your choice. As normal, you can't increase an ability score above 20 using this 
+                feature.
+            </p>
+            <h2 id="font_of_inspiration">
+                Font of Inspiration
+            </h2>
+            <p>
+                Beginning when you reach 5th level, you regain all of your expended uses 
+                of Bardic Inspiration when you finish a short or long rest.
+            </p>
+            <h2 id="countercharm">
+                Countercharm
+            </h2>
+            <p>
+                At 6th level, you gain the ability to use artistic inspiration or words of power 
+                to disrupt mind-influencing effects. If you or a creature that you can see and that 
+                can see or hear you within 30 feet fails a saving throw against being charmed 
+                or frightened, you can use your reaction to allow them to reroll the save, 
+                giving them advantage on the reroll.
+            </p>
+            <h2 id="magical_secrets">
+                Magical Secrets
+            </h2>
+            <p>
+                By 10th level, you have plundered magical knowledge from a wide spectrum 
+                of disciplines. Choose two spells from any classes, including this one. 
+                A spell you choose must be of a level you can cast, as shown on the Bard 
+                table, or a cantrip.
+            </p>
+            <p>
+                The chosen spells count as bard spells for you and are included in the number 
+                in the Spells Known column of the Bard table.
+            </p>
+            <p>
+                You learn two additional spells from any classes at 14th level and again at 18th level.
+            </p>
+            <h2 id="transcendent_artist">
+                Transcendent Artist
+            </h2>
+            <p>
+                At 20th level, your skill for inspiring art is unending. Your Bardic 
+                Inspiration die is now 2d12 instead of 1d12. Also, 
+                the number of times you can use Bardic Inspiration is now equal to 
+                two times your Charisma Modifier (minimum of twice), you can give a 
+                creature Bardic Inspiration as a reaction when that creature makes 
+                an attack roll, ability check, or saving throw, and when you roll 
+                initiative and have no uses of Bardic Inspiration left, you regain 
+                two uses.
+            </p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <div class="space"></div>
+</body>

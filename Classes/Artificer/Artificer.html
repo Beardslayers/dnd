@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>DND Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src = "/collapsible.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("/header.html"); 
+        });
+    </script> 
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="space"></div>
+    <div class = "center_content_block">
+        <div class="spacer"></div>
+        <div class="row_center">
+            <h3><span id = "artificer">Artificer</span></h3>
+            <button type = "button" class="collapsible" id = "artificer_summary" onclick="collapse('artificer_summary')">Class Summary</button>
+            <div class="collapsible_content">
+                <h4>
+                    General Flavor
+                </h4>
+                <p>
+                    An inventor who uses their spells to create magical items.
+                </p>
+                <h4>
+                    Ability Summary
+                </h4>
+                <p>
+                    Half-Spellcaster [Utility, Buffs, Minor Healing]
+                </p>
+                <p>
+                    Create Magic Items
+                </p>
+                <p>
+                    Use Extra Magic Items
+                </p>
+            </div>
+            <button type = "button" class="collapsible" id = "artificer_flavor" onclick="collapse('artificer_flavor')">Class Flavor</button>
+            <div class="collapsible_content">
+                <p>
+                    With unnatural speed, a gnome dashes away from the pursuing giant, 
+                    and his armor opens to let him inside before sliding closed behind him. 
+                    He turns around and clenches his fist, 
+                    and the gem on his gauntlet begins to spark with lightning.
+                </p>
+                <p>
+                    A slender elf slips behind a long tube of wrought iron, 
+                    and as she pats it lovingly, 
+                    it erupts with flames, burning the zombie horde.
+                </p>
+                <p>
+                    As poison erupts from slits in the walls, 
+                    an elderly woman cackles in amusement and strolls forward.
+                    A steel cage embedded in her chest pulses rhythmically, 
+                    and she slams her steel prosthtetic arm through the stone door 
+                    barring her way forward.
+                </p>
+                <p>
+                    Masters of invention, artificers use ingenuity and magic 
+                    to unlock extraordinary capabilities in objects. 
+                    They see magic as a complex system just waiting to be 
+                    decoded and harnessed by their spells and inventions.
+                </p>
+                <h4>
+                    Understanding and Application
+                </h4>
+                <p>
+                    Much of the world views magic as an unsolvable mystery, 
+                    an enigma that can never be understood. To an artificer, 
+                    on the other hand, magic is a puzzle, just waiting for the 
+                    right pieces to be put into place. Their lives are dedicated 
+                    to finding those pieces, and then to using their discovered 
+                    knowledge to create great things. To an artificer, there is 
+                    no such thing as the unknowable, only the as-yet-unknown.
+                </p>
+                <p>
+                    While an artificer has some skill at improvising, 
+                    their greatest ability is in preparation. While other 
+                    classes create solutions in the moment, an artificer will 
+                    create solutions weeks or months in advance, constructing 
+                    the perfect device to solve a problem, no matter when 
+                    that problem may come.
+                </p>
+                <h4>
+                    New Experiences
+                </h4>
+                <p>
+                    Not every craftsman is an artificer. Some people simply 
+                    take their skills and apply them to creation. They may 
+                    study to complete a specific job, but in general they are 
+                    content with their knowledge and the skills they already have. 
+                    An artificer is set apart by their insatiable appetite for new 
+                    applications of their knowledge. They want to do new things, to 
+                    change what can be done, and to create heaven-and-earth-defying 
+                    tools. An artificer is proud of what they have done, but what 
+                    they have done is in the past, and for an artificer, the greatest 
+                    joy is in tomorrow.
+                </p>
+                <p>
+                    Because artificers are not prone to improvisation, their adventuring 
+                    capabilities may be weak as a solo wanderer. Without an adventuring 
+                    party, artificers often find themselves becoming tied down, 
+                    trapped in a town or city an unsure of where to go next. When 
+                    paired with a party, however, an artificer will often be the most 
+                    enthusiastic about visiting new places. An artificer may understand 
+                    the importance of a job that requires staying in one location, and 
+                    they will likely have a home base or two, where they keep their 
+                    more fine-tuned or heavy-to-move tools. But they will always be 
+                    looking for the next opportunity to leave, even if they come back 
+                    home at the end.
+                </p>
+                <h4>
+                    Creating an Artificer
+                </h4>
+                <p>
+                    Since an artificer is defined by their curiosity 
+                    and creativity, think about where those traits 
+                    came from. Did a craftsman parent inspire them to 
+                    always look and understand? Did a glimpse of a 
+                    passing sorcerer spark their curiosity about the 
+                    unknowns of the world? Or were they dismissed by 
+                    academic snobs who were convinced they could never 
+                    understand the truth?
+                </p>
+                <p>
+                    Beyond those basic traits, consider what inspired 
+                    your artificer to adventure. Curiosity and creativity 
+                    could both be achieved in a quiet forge or workshop, 
+                    staying in one place. So what made your character 
+                    leave the comfort of a stationary life? Did they 
+                    grow up in a small town with limited resources, 
+                    and so had to leave in order to learn? Did they 
+                    grow up near a university, but decide a practical 
+                    education would be better? Or did they grow up on 
+                    the move, and a life of adventure is actually fairly 
+                    stationary compared to what they're used to?
+                </p>
+            </div>
+            <p>
+                <em>
+                    You must have an Intelligence score of 13 or 
+                    higher in order to multiclass into this class.
+                </em>
+            </p>
+            <table class = "class_table">
+                <tr class="class_table_header_row">
+                    <th colspan="3">The Artificer</th>
+                    <th colspan="6">Spell Slots per Spell Level</th>
+                </tr>
+                <tr class="class_table_header_row">
+                    <th>Level</th>
+                    <th>Proficiency Bonus</th>
+                    <th>Features</th>
+                    <th>Cantrips Known</th>
+                    <th>1st</th>
+                    <th>2nd</th>
+                    <th>3rd</th>
+                    <th>4th</th>
+                    <th>5th</th>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>1st</td>
+                    <td>+2</td>
+                    <td>Firearm Proficiency, Magical Tinkering,
+                        Spellcasting, Integrated Tools
+                    </td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>2nd</td>
+                    <td>+2</td>
+                    <td>Brew Potions, Inscribe Scrolls
+                    </td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+            </table>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <div class="space"></div>
+</body>

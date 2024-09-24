@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>DND Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src = "/collapsible.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("/header.html"); 
+        });
+    </script> 
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="space"></div>
+    <div class = "center_content_block">
+        <div class="spacer"></div>
+        <div class="row_center">
+            <div class="center_content"><h1 style="font-weight: normal"><span id = "fighter">Fighter</span></h1></div>
+            <button type = "button" class="collapsible" id = "fighter_summary" onclick="collapse('fighter_summary')">Class Summary</button>
+            <div class="collapsible_content">
+                <h4>
+                    General Flavor
+                </h4>
+                <p>
+                    Customizable warrior with multiple attacks and specialized abilities.
+                </p>
+                <h4>
+                    Ability Summary
+                </h4>
+                <p>
+                    Good Defense
+                </p>
+                <p>
+                    Good Offense
+                </p>
+                <p>
+                    Multiple Attacks
+                </p>
+                <p>
+                    Customizable Stats and Abilities
+                </p>
+            </div>
+            <button type = "button" class="collapsible" id = "fighter_flavor" onclick="collapse('fighter_flavor')">Class Flavor</button>
+            <div class="collapsible_content">
+                <p>
+                    A human in clanging plate armor holds her shield before her as she 
+                    runs toward the massive goblins. An elf behind her, clad in studded 
+                    leather armor, peppers the goblins with arrows loosed from his exquisite 
+                    bow. The half-orc nearby shouts orders, helping the two combatants 
+                    coordinate their assault to the best advantage.
+                </p>
+                <p>
+                    A dwarf in chain mail interposes his shield between the ogre's club and 
+                    his companion, knocking the deadly blow aside. His companion, a half-elf 
+                    in scale armor, swings two scimitars in a blinding whirl as she circles 
+                    the ogre, looking for a blind spot in its defenses.
+                </p>
+                <p>
+                    A gladiator fights for sport in an arena, a master with his trident 
+                    and net, skilled at toppling foes and moving them around for the crowd's 
+                    delight—and his own tactical advantage. His opponent's sword flares with 
+                    blue light an instant before she sends lightning flashing forth to smite him.
+                </p>
+                <p>
+                    All these heroes are fighters, perhaps the most diverse class of characters 
+                    in the worlds of D&D. Questing knights, conquering overlords, royal 
+                    champions, elite foot soldiers, hardened mercenaries, and bandit kings—as 
+                    fighters, they all share an unparalleled mastery with weapons and armor, 
+                    and a thorough knowledge of the skills of combat. And they are well 
+                    acquainted with death, both meting it out and staring it defiantly 
+                    in the face.
+                </p>
+                <p>
+                    While the concept of a fighter is simple—a warrior who trains to
+                    perfect the use of weapons and armor—fighters themselves can take
+                    on many forms. Some fighters are brutes clad in heavy armor, wading
+                    into battle with a greatsword, while others are tacticians, leading 
+                    their allies into battle and inspiring them to greatness. No matter 
+                    their appearance and methods, Fighters share one unifying characteristic: 
+                    an unparalleled mastery of weapons and armor, and a thorough knowledge 
+                    of the skills of combat.
+                </p>
+                <h4>
+                    Power of Nature
+                </h4>
+                <p>
+                    Fighters learn the basics of all combat styles. Every fighter can 
+                    swing an axe, fence with a rapier, wield a longsword or a greatsword, 
+                    use a bow, and even trap foes in a net with some degree of skill. 
+                    Likewise, a fighter is adept with shields and every form of armor. 
+                    Beyond that basic degree of familiarity, each fighter specializes 
+                    in a certain style of combat. Some concentrate on archery, some on 
+                    fighting with two weapons at once, and some on augmenting their 
+                    martial skills with magic. This combination of broad general ability 
+                    and extensive specialization makes fighters superior combatants on 
+                    battlefields and in dungeons alike.
+                </p>
+                <h4>
+                    Trained for Danger
+                </h4>
+                <p>
+                    Not every member of the city watch, the village militia, or 
+                    the queen's army is a fighter. Most of these troops are relatively 
+                    untrained soldiers with only the most basic combat knowledge. 
+                    Veteran soldiers, military officers, trained bodyguards, dedicated 
+                    knights, and similar figures are fighters.
+                </p>
+                <p>
+                    Some fighters feel drawn to use their training as adventurers. The 
+                    dungeon delving, monster slaying, and other dangerous work common 
+                    among adventurers is second nature for a fighter, not all that 
+                    different from the life he or she left behind. There are greater 
+                    risks, perhaps, but also much greater rewards—few fighters in the 
+                    city watch have the opportunity to discover a magic flame tongue 
+                    sword, for example.
+                </p>
+                <h4>
+                    Creating a Fighter
+                </h4>
+                <p>
+                    As you build your fighter, think about two related elements of 
+                    your character's background: Where did you get your combat 
+                    training, and what set you apart from the mundane warriors 
+                    around you? Were you particularly ruthless? Did you get extra 
+                    help from a mentor, perhaps because of your exceptional dedication? 
+                    What drove you to this training in the first place? A threat to your 
+                    homeland, a thirst for revenge, or a need to prove yourself might 
+                    all have been factors.
+                </p>
+                <p>
+                    You might have enjoyed formal training in a noble's army or in a 
+                    local militia. Perhaps you trained in a war academy, learning 
+                    strategy, tactics, and military history. Or you might be self-taught—unpolished 
+                    but well tested. Did you take up the sword as a way to 
+                    escape the limits of life on a farm, or are you following a proud 
+                    family tradition? Where did you acquire your weapons and armor? They 
+                    might have been military issue or family heirlooms, or perhaps you 
+                    scrimped and saved for years to buy them. Your armaments are now 
+                    among your most important possessions—the only things that stand 
+                    between you and death's embrace.
+                </p>
+            </div>
+            <div class="center_content"><p>
+                <em>
+                    You must have an Dexterity or Strength score of 13 or 
+                    higher in order to multiclass into this class.
+                </em>
+            </p></div>
+            <table class = "class_table">
+                <tr class="class_table_header_row">
+                    <th colspan="3">The Fighter</th>
+                </tr>
+                <tr class="class_table_header_row">
+                    <th>Level</th>
+                    <th>Proficiency Bonus</th>
+                    <th>Features</th>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>1st</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#fighting_style">Fighting Style</a>,
+                        <a class="body_link" href="#second_wind">Second Wind</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>2nd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#action_surge">Action Surge (one use)</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>3rd</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#martial_archetype">Martial Archetype</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>4th</td>
+                    <td>+2</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>5th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#extra_attack">Extra Attack</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>6th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>7th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#martial_archetype">Martial Archetype Feature</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>8th</td>
+                    <td>+3</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>9th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#indomitable">Indomitable (one use)</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>10th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#martial_archetype">Martial Archetype Feature</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>11th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#extra_attack">Extra Attack (2)</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>12th</td>
+                    <td>+4</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>13th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#indomitable">Indomitable (two uses)</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>14th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>15th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#martial_archetype">Martial Archetype Feature</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>16th</td>
+                    <td>+5</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>17th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#action_surge">Action Surge (two uses)</a>,
+                        <a class="body_link" href="#indomitable">Indomitable (three uses)</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>18th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#martial_archetype">Martial Archetype Feature</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>19th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#ability_score_improvement">Ability Score Improvement</a>
+                    </td>
+                </tr>
+                <tr class="class_table_content_row"></tr>
+                    <td>20th</td>
+                    <td>+6</td>
+                    <td>
+                        <a class="body_link" href="#extra_attack">Extra Attack (3)</a>, 
+                        <a class="body_link" href="#battlefield_hero">Battlefield Hero</a>
+                    </td>
+                </tr>
+            </table>
+            <div class="center_content"><h1 style="font-weight: 600">
+                Class Features
+            </h1>
+            <p>
+                As a fighter, you gain the following class features.
+            </p>
+            <h3>
+                Hit Points
+            </h3>
+            <p>
+                <strong>Hit Dice:</strong> 1d10 per fighter level
+            </p>
+            <p>
+                <strong>Hit Points at 1st Level:</strong> 10 + your Constitution modifier
+            </p>
+            <p>
+                <strong>Hit Points at Higher Levels:</strong> 1d10 + your Constitution 
+                modifier per fighter level after 1st.
+            </p>
+            <h3>
+                Proficiencies
+            </h3>
+            <p>
+                <strong>Armor:</strong> All armor, shields
+            </p>
+            <p>
+                <strong>Weapons:</strong> Simple weapons, martial weapons
+            </p>
+            <p>
+                <strong>Tools:</strong> None
+            </p>
+            <p>
+                <strong>Saving Throws:</strong> Strength, Constitution
+            </p>
+            <p>
+                <strong>Skills:</strong> Choose two from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival
+            </p>
+            <h3>
+                Equipment
+            </h3>
+            <p>
+                You start with the following equipment, in addition to the equipment
+                granted by your background:
+                <ul>
+                    <li>(a) chain mail or (b) leather armor, a longbow, and 20 arrows</li>
+                    <li>(a) a martial weapon and a shield or (b) two martial weapons</li>
+                    <li>(a) a light crossbow and 20 bolts or (b) two handaxes</li>
+                    <li>(a) a dungeoneer's pack or (b) an explorer's pack</li>
+                </ul>
+                Alternatively, you can buy your own equipment, starting with 132 gp, 5 sp, and 2 cp.
+            </p>
+            <h2 id="fighting_style">
+                Fighting Style
+            </h2>
+            <p>
+                You adopt a particular style of fighting as your specialty. 
+                Choose one of the following options. You can't take a Fighting 
+                Style option more than once, even if you later get to choose again.
+            </p>
+            <p> 
+                When you gain a level in this class, you can replace your chosen 
+                Fighting Style know with another Fighting Style available to fighters.
+            </p>
+            <ul>
+                <li>
+                    <strong>Archery:</strong> You gain a +2 bonus to attack rolls 
+                    you make with ranged weapons.
+                </li>
+                <li>
+                    <strong>Blind Fighting:</strong> You have blindsight with a 
+                    range of 10 feet. Within that range, you can effectively see anything 
+                    that isn't behind total cover, even if you're blinded or in darkness. 
+                    Moreover, you can see an invisible creature within that range, unless 
+                    the creature successfully hides from you.
+                </li>
+                <li>
+                    <strong>Defense:</strong> While you are wearing armor, you gain a +1 bonus to AC.
+                </li>
+                <li>
+                    <strong>Dueling:</strong> When you are wielding a melee weapon in one 
+                    hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.
+                </li>
+                <li>
+                    <strong>Great Weapon Fighting:</strong> When you roll a 1 or 2 
+                    on a damage die for an attack you make with a melee weapon that 
+                    you are wielding with two hands, you can treat the roll as worth
+                    half the maximum roll of the die. For example, if you rolled a 
+                    1 or 2 on a d10, you would treat it as a 5. 
+                    The weapon must have the two-handed or versatile property 
+                    for you to gain this benefit.
+                </li>
+                <li>
+                    <strong>Interception:</strong> When a creature you can see 
+                    hits a target that is within 5 feet of you with an attack, 
+                    you can use your reaction to reduce the damage the target 
+                    takes by 1d10 + your proficiency bonus (to a minimum of 0 
+                    damage). You must be wielding a shield or a simple or martial 
+                    weapon to use this reaction.
+                </li>
+                <li>
+                    <strong>Protection:</strong> While you are wielding a shield,
+                    each creature of your choice within 5 feet of you that is not 
+                    wielding a shield gains a +1 bonus to AC.
+                </li>
+                <li>
+                    <strong>Superior Technique:</strong> You learn one maneuver 
+                    of your choice from among those available to the 
+                    <a class="body_link" href=/Classes/Fighter/BattleMaster.html>Battle Master archetype</a> 
+                    in the fighter class. If a maneuver you use requires 
+                    your target to make a saving throw to resist the maneuver's effects, 
+                    the saving throw DC equals 8 + your proficiency 
+                    bonus + your Strength or Dexterity modifier (your choice).
+                    <ul><li>You gain one superiority die, which is a d6 (this die is added 
+                        to any superiority dice you have from another source). This die is 
+                        used to fuel your maneuvers. A superiority die is expended when you use 
+                        it. You regain your expended superiority dice when you finish a short 
+                        or long rest.</li></ul>
+                </li>
+                <li>
+                    <strong>Thrown Weapon Fighting:</strong> You can draw a weapon that has
+                    the thrown property as part of the attack you make with the weapon. In
+                    addition, when you hit with a ranged attack using a thrown weapon, you
+                    gain a +2 bonus to the damage roll.
+                </li>
+                <li>
+                    <strong>Two-Weapon Fighting:</strong> When you engage in two-weapon 
+                    fighting, you can add your ability modifier to the damage of the 
+                    second attack.
+                </li>
+                <li>
+                    <strong>Unarmed Fighting:</strong> Your unarmed strikes can deal 
+                    bludgeoning damage equal to 1d4 + your Strength modifier on a hit. 
+                    If you aren't wielding any weapons or a shield when you make the 
+                    attack roll, the d4 becomes a d6. <ul><li>At the start of each of 
+                        your turns, you can deal 1d4 bludgeoning damage to one creature 
+                        grappled by you.</li></ul>
+                </li>
+            </ul>
+            <h2 id="second_wind">
+                Second Wind
+            </h2>
+            <p>
+                You have a limited well of stamina that you can draw on to protect 
+                yourself from harm. On your turn, you can use a bonus action to 
+                regain hit points equal to 1d10 + your fighter level.
+            </p>
+            <p>
+                Once you use this feature, you must finish a short or long rest 
+                before you can use it again.
+            </p>
+            <h2 id="action_surge">
+                Action Surge
+            </h2>
+            <p>
+                Starting at 2nd level, you can push yourself beyond your normal 
+                limits for a moment. On your turn, you can take one additional action.
+            </p>
+            <p>
+                Once you use this feature, you must finish a short or long rest 
+                before you can use it again. Starting at 17th level, you can use 
+                it twice before a rest, but only once on the same turn.
+            </p>
+            <h2 id="martial_archetype">
+                Martial Archetype
+            </h2>
+            <p>
+                At 3rd level, you choose an archetype that you strive to emulate 
+                in your combat styles and techniques. Choose to become an
+                <a class="body_link" href=/Classes/Fighter/ArcaneArcher.html>Arcane Archer</a>, 
+                <a class="body_link" href=/Classes/Fighter/Banneret.html>Banneret</a>, 
+                <a class="body_link" href=/Classes/Fighter/BattleMaster.html>Battle Master</a>, 
+                <a class="body_link" href=/Classes/Fighter/Champion.html>Champion</a>, 
+                <a class="body_link" href=/Classes/Fighter/EchoKnight.html>Echo Knight</a>, 
+                <a class="body_link" href=/Classes/Fighter/MageKnight.html>Mage Knight</a>, 
+                <a class="body_link" href=/Classes/Fighter/PsiWarrior.html>Psi Warrior</a>, 
+                <a class="body_link" href=/Classes/Fighter/RuneKnight.html>Rune Knight</a>, 
+                or <a class="body_link" href=/Classes/Fighter/Samurai.html>Samurai</a>, 
+                Your choice grants you features at 3rd level and again at 7th, 10th, 
+                15th, and 18th level.
+            </p>
+            <h2 id="ability_score_improvement">
+                Ability Score Improvement
+            </h2>
+            <p>
+                When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, 
+                you can increase one ability score of your choice by 2, increase two ability scores of 
+                your choice by 1, or gain one <a class="body_link" href=/Feats/Feats.html>feat</a> 
+                of your choice. As normal, you can't increase an ability score above 20 using this 
+                feature.
+            </p>
+            <h2>
+                Martial Versatility
+            </h2>
+            <p>
+                Whenever you reach a level in this class that grants the Ability Score Improvement feature, 
+                as you shift the focus of your martial practice, if you know any maneuvers from the 
+                <a class="body_link" href=/Classes/Fighter/BattleMaster.html>Battle Master archetype</a>, 
+                you can replace one maneuver you know with a different maneuver.
+            </p>
+            <h2 id="extra_attack">
+                Extra Attack
+            </h2>
+            <p>
+                Beginning at 5th level, you can attack twice, instead of once, whenever 
+                you take the Attack action on your turn.
+            </p>
+            <p>
+                The number of attacks increases to three when you reach 11th level in this class 
+                and to four when you reach 20th level in this class.
+            </p>
+            <h2 id="indomitable">
+                Indomitable
+            </h2>
+            <p>
+                Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, 
+                you must use the new roll, and you can't use this feature again until you finish a 
+                long rest.
+            </p>
+            <p>
+                You can use this feature twice between long rests starting at 13th level and three 
+                times between long rests starting at 17th level.
+            </p>
+            <h2 id="battlefield_hero">
+                Battlefield Hero
+            </h2>
+            <p>
+                At 20th level, the battlefield has become a second home to you,
+                as familiar as your own bed. You can use a bonus action to gain the benefits
+                of a short rest. Once you have used this feature, 
+                you must finish a short or long rest before you can do so again.
+            </p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <div class="space"></div>
+</body>
