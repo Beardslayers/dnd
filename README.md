@@ -1,7 +1,3 @@
-# Team1-Mario-Shooter
+# DND-wiki
 # Created by:
-# Miles Phillips
 # Vincent Beardsley
-# Edward Levin
-# Matt Benvenuto
-# Yash Oulkar
