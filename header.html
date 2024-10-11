@@ -1,8 +1,10 @@
-
+<head>
+    <script src = "/searchall.js"></script>
+</head>
 <div id = "header_group">
-    <h1 class="header_element"><a class="header_link" href="/dnd/index.html">DND Wiki</a></h1>
-    <h3 class="header_element"><a class="header_link" href="/dnd/Classes/Classes.html">Classes</a></h3>
-    <h3 class="header_element">Spells</h3>
+    <h1 class="header_element"><a class="header_link" href="/index.html">DND Wiki</a></h1>
+    <h3 class="header_element"><a class="header_link" href="/Classes/Classes.html">Classes</a></h3>
+    <h3 class="header_element"><a class="header_link" href="/Spells/Spells.html">Spells</a></h3>
     <h3 class="header_element">Feats</h3>
     <h3 class="header_element">Races</h3>
     <h3 class="header_element">Items</h3>
@@ -10,4 +12,15 @@
     <h3 class="header_element">Miscellaneous</h3>
     <h3 class="header_element">Monsters</h3>
     <h3 class="header_element">Characters</h3>
+</div>
+<div id="main_search" class="search_bar">
+    <div class="spacer"></div>
+    <div class="search_image"></div>
+    <form>
+        <input type="text" id="fname" name="fname" oninput="search_all(this.value)">
+    </form>
+    <div class="spacer"></div>
+</div>
+<div id="search_results_wrapper">
+<div id="search_results"></div>
 </div>

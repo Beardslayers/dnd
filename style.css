@@ -278,7 +278,11 @@ a.body_link:active {
 .row_center {
     float: left;
     width: 60%;
-    border-style: groove;
+    box-shadow: 1.5px 1.5px 0 0px #aaaaaa inset, -1.5px -1.5px 0 0px #555555 inset; /*darker: 555555, lighter: aaaaaa*/
+    border-left: solid #555555 1.5px;
+    border-top: solid #555555 1.5px;
+    border-bottom: solid #aaaaaa 1.5px;
+    border-right: solid #aaaaaa 1.5px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -291,7 +295,7 @@ a.body_link:active {
 }
 
 .center_content {
-    width: 98%;
+    width: calc(98% - 3px);
 }
 
 .side_class {
@@ -315,7 +319,7 @@ a.body_link:active {
     color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
+    width: calc(100% - 3px);
     border-top-style: solid;
     border-left-style: none;
     border-right-style: none;
@@ -323,6 +327,8 @@ a.body_link:active {
     text-align: left;
     outline: none;
     font-size: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
   }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -341,18 +347,18 @@ a.body_link:active {
   }
 
   table.class_table {
-    width: 100%
+    width: calc(100% - 3px);
   }
 
   tr.class_table_header_row th {
     background-color: #908149;
   }
 
-  td {
+  .class_table td {
     border: 1pt solid black;
   }
 
-  th, td {
+  .class_table th, .class_table td {
     padding: 4px;
     text-align: center;
     vertical-align: middle;
@@ -384,3 +390,82 @@ h2 {
     margin-bottom: 1rem;
     margin-top: 1em;
 }*/
+
+
+.search_bar {
+    background-color: darkgray;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.search_image {
+    height: 25px;
+    content: url(/MagnifyingGlass.jpeg);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.search_button {
+    border: none;
+    background-color: darkgray;
+    color: green;
+}
+.search_button:hover {
+    background-color: darkgray;
+}
+
+#search_results {
+    max-height: 50vh;
+    overflow-y: auto;
+    background-color: lightgray;
+    border: solid;
+    border-width: 1.5px;
+    display: block;
+    align-items: center;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px black inset;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.search_result {
+    height: 2.2vh;
+    padding: 1em;
+    border: solid;
+    border-bottom-width: 1.5px;
+    border-top-width: 1.5px;
+    background-color: lightgray;
+}
+
+a.search_link:link {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #ECE9E4;*/
+    color: black;
+}
+a.search_link:visited {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #ECE9E4;*/
+    color: black;
+}
+a.search_link:hover {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #f7f7f7;*/
+    /*color: #ffffff;*/
+    color: darkgrey;
+    border-style: groove;
+    border-width: 0;
+}
+a.search_link:active {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #ECE9E4;*/
+}

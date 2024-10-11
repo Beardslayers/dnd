@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>DND Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/Spells/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src = "/Spells/tabselect.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("/header.html"); 
+        });
+    </script> 
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="space"></div>
+    <div class = "center_content_block">
+        <div class="spacer"></div>
+        <div class="spell_row_center">
+            <div class="spell_list_header_content">
+                <div class="spell_list_empty"></div>
+                <h1 style="font-weight: normal"><span id = "spells">Bard Spell List</span></h1>
+                <div class="spell_list_key">
+                    <p>Symbol Key</p>
+                    <p>R = Ritual Castable</p>
+                    <p>$ = Costly Component</p>
+                </div>
+            </div>
+            <div class="center_content">
+                <div class="spell_center_content">
+                    <div class="tab">
+                        <button id="cantrips_button" class="spell_tab active" onclick="openLevel(event, 'Cantrips')">Cantrips</button>
+                        <button id="1st_button" class="spell_tab" onclick="openLevel(event, '1st')">1st Level</button>
+                        <button id="2nd_button" class="spell_tab" onclick="openLevel(event, '2nd')">2nd Level</button>
+                        <button id="3rd_button" class="spell_tab" onclick="openLevel(event, '3rd')">3rd Level</button>
+                        <button id="4th_button" class="spell_tab" onclick="openLevel(event, '4th')">4th Level</button>
+                        <button id="5th_button" class="spell_tab" onclick="openLevel(event, '5th')">5th Level</button>
+                        <button id="6th_button" class="spell_tab" onclick="openLevel(event, '6th')">6th Level</button>
+                        <button id="7th_button" class="spell_tab" onclick="openLevel(event, '7th')">7th Level</button>
+                        <button id="8th_button" class="spell_tab" onclick="openLevel(event, '8th')">8th Level</button>
+                        <button id="9th_button" class="spell_tab" onclick="openLevel(event, '9th')">9th Level</button>
+                    </div>
+                </div>
+                <table class = "spell_table">
+                    <tr class="class_table_header_row">
+                        <th class="spell_name">Spell Name</th>
+                        <th class="casting_time">Casting Time</th>
+                        <th class="range">Range</th>
+                        <th class="duration">Duration</th>
+                        <th class="components">Components</th>
+                        <th class="school">School</th>
+                    </tr>
+                    <tbody id="Cantrips" class="spell_level_table">
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/BoomingBlade.html">Booming Blade</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self (5-foot radius)</td>
+                            <td>1 round</td>
+                            <td>Gesture, Material<sup>$</sup></td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/DancingLights.html">Dancing Lights</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/Friends.html">Friends</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/Light.html">Light</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>1 hour</td>
+                            <td>Verbal, Material</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/MageHand.html">Mage Hand</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/Mending.html">Mending</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Transmutation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/Message.html">Message</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>1 round</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/MindSliver.html">Mind Sliver</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>1 round</td>
+                            <td>Verbal</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/MinorIllusion.html">Minor Illusion</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>1 minute</td>
+                            <td>Gesture, Material</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/Prestidigitation.html">Prestidigitation</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>10 feet</td>
+                            <td>Up to 1 hour</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Transmutation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/Thunderclap.html">Thunderclap</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self (5-foot radius)</td>
+                            <td>Instantaneous</td>
+                            <td>Gesture</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="Cantrips/TrueStrike.html">True Strike</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self</td>
+                            <td>Instantaneous</td>
+                            <td>Gesture, Material<sup>$</sup></td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td style="border-bottom: none">
+                                <a class="body_link" href="Cantrips/ViciousMockery.html">Vicious Mockery</a>
+                            </td>
+                            <td style="border-bottom: none">1 action</td>
+                            <td style="border-bottom: none">60 feet</td>
+                            <td style="border-bottom: none">Instantaneous</td>
+                            <td style="border-bottom: none">Verbal</td>
+                            <td style="border-bottom: none">Enchantment</td>
+                        </tr>
+                    </tbody>
+                    <tbody id="1st" class="spell_level_table" style="display: none;">
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/AnimalFriendship.html">Animal Friendship</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>24 hours</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/Bane.html">Bane</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/CauseFear.html">Cause Fear</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/CharmPerson.html">Charm Person</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>1 hour</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/ColorSpray.html">Color Spray</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self (15-foot cone)</td>
+                            <td>1 round</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/Command.html">Command</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>1 round</td>
+                            <td>Verbal</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/ComprehendLanguages.html">Comprehend Languages</a>
+                            </td>
+                            <td>1 action<sup>R</sup></td>
+                            <td>Self</td>
+                            <td>1 hour</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/CureWounds.html">Cure Wounds</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/DetectMagic.html">Detect Magic</a>
+                            </td>
+                            <td>1 action<sup>R</sup></td>
+                            <td>Self</td>
+                            <td>Concentration, up to 10 minutes</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/DisguiseSelf.html">Disguise Self</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self</td>
+                            <td>1 hour</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/DissonantWhispers.html">Dissonant Whispers</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/DistortValue.html">Distort Value</a>
+                            </td>
+                            <td>1 minute</td>
+                            <td>Touch</td>
+                            <td>8 hours</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/FaerieFire.html">Faerie Fire</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/FeatherFall.html">Feather Fall</a>
+                            </td>
+                            <td>1 reaction</td>
+                            <td>60 feet</td>
+                            <td>1 minute</td>
+                            <td>Verbal, Material</td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/Grease.html">Grease</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Conjuration</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/HealingWord.html">Healing Word</a>
+                            </td>
+                            <td>1 bonus action</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/Heroism.html">Heroism</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/Identify.html">Identify</a>
+                            </td>
+                            <td>1 minute<sup>R</sup></td>
+                            <td>Touch</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/IllusoryScript.html">Illusory Script</a>
+                            </td>
+                            <td>1 minute<sup>R</sup></td>
+                            <td>Touch</td>
+                            <td>10 days</td>
+                            <td>Gesture, Material<sup>$C</sup></td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/Longstrider.html">Longstrider</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>1 hour</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Transmutation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/SilentImage.html">Silent Image</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 10 minutes</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/SilveryBarbs.html">Silvery Barbs</a>
+                            </td>
+                            <td>1 reaction</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/SpeakWithAnimals.html">Speak with Animals</a>
+                            </td>
+                            <td>1 action<sup>R</sup></td>
+                            <td>Self</td>
+                            <td>10 minutes</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/TashasHideousLaughter.html">Tasha's Hideous Laughter</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="1st/Thunderwave.html">Thunderwave</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self (15-foot cube)</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td style="border-bottom: none">
+                                <a class="body_link" href="1st/UnseenServant.html">Unseen Servant</a>
+                            </td>
+                            <td style="border-bottom: none">1 action<sup>R</sup></td>
+                            <td style="border-bottom: none">60 feet</td>
+                            <td style="border-bottom: none">1 hour</td>
+                            <td style="border-bottom: none">Verbal, Gesture, Material</td>
+                            <td style="border-bottom: none">Conjuration</td>
+                        </tr>
+                    </tbody>
+                    <tbody id="2nd" class="spell_level_table" style="display: none;">
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/AganazzarsScorcher.html">Aganazzar's Scorcher</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Evocation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/Aid.html">Aid</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>8 hours</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/AnimalMessenger.html">Animal Messenger</a>
+                            </td>
+                            <td>1 action<sup>R</sup></td>
+                            <td>30 feet</td>
+                            <td>24 hours</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/BlindnessDeafness.html">Blindness/Deafness</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>1 minute</td>
+                            <td>Verbal</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/BorrowedKnowledge.html">Borrowed Knowledge</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self</td>
+                            <td>1 hour</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/CalmEmotions.html">Calm Emotions</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/CrownOfMadness.html">Crown of Madness</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/DetectThoughts.html">Detect Thoughts</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/EnhanceAbility.html">Enhance Ability</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Concentration, up to 1 hour</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/EnlargeReduce.html">Enlarge/Reduce</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Transmutation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/Enthrall.html">Enthrall</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/FindTraps.html">Find Traps</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/GiftOfGab.html">Gift of Gab</a>
+                            </td>
+                            <td>1 reaction</td>
+                            <td>Self</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/HoldPerson.html">Hold Person</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/Invisibility.html">Invisibility</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Concentration, up to 1 hour</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/JimsGlowingCoin.html">Jim's Glowing Coin</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>1 hour</td>
+                            <td>Gesture, Material<sup>$C</sup></td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/Knock.html">Knock</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal</td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/LesserRestoration.html">Lesser Restoration</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/LocateObject.html">Locate Object</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self</td>
+                            <td>Concentration, up to 10 minutes</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/MagicMouth.html">Magic Mouth</a>
+                            </td>
+                            <td>1 minute<sup>R</sup></td>
+                            <td>30 feet</td>
+                            <td>Until dispelled</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/MirrorImage.html">Mirror Image</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self</td>
+                            <td>1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/MistyStep.html">Misty Step</a>
+                            </td>
+                            <td>1 bonus action</td>
+                            <td>Self</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal</td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/NathairsMischief.html">Nathair's Mischief</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Gesture, Material</td>
+                            <td>Conjuration</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/PhantasmalForce.html">Phantasmal Force</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/Pyrotechnics.html">Pyrotechnics</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Transmutation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/SeeInvisibility.html">See Invisibility</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self</td>
+                            <td>1 hour</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/Shatter.html">Shatter</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/Silence.html">Silence</a>
+                            </td>
+                            <td>1 action<sup>R</sup></td>
+                            <td>120 feet</td>
+                            <td>Concentration, up to 10 minutes</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/Suggestion.html">Suggestion</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Concentration, up to 8 hours</td>
+                            <td>Verbal, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="2nd/TashasMindWhip.html">Tasha's Mind Whip</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>90 feet</td>
+                            <td>1 round</td>
+                            <td>Verbal</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td style="border-bottom: none">
+                                <a class="body_link" href="2nd/ZoneOfTruth.html">Zone of Truth</a>
+                            </td>
+                            <td style="border-bottom: none">1 action</td>
+                            <td style="border-bottom: none">60 feet</td>
+                            <td style="border-bottom: none">10 minutes</td>
+                            <td style="border-bottom: none">Verbal, Gesture</td>
+                            <td style="border-bottom: none">Enchantment</td>
+                        </tr>
+                    </tbody>
+                    <tbody id="3rd" class="spell_level_table" style="display: none;">
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/Antagonize.html">Antagonize</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/BestowCurse.html">Bestow Curse</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/Catnap.html">Catnap</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>10 minutes</td>
+                            <td>Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/Clairvoyance.html">Clairvoyance</a>
+                            </td>
+                            <td>10 minutes</td>
+                            <td>1 mile</td>
+                            <td>Concentration, up to 10 minutes</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/DispelMagic.html">Dispel Magic</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/EnemiesAbound.html">Enemies Abound</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/FastFriends.html">Fast Friends</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Concentration, up to 1 hour</td>
+                            <td>Verbal</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/Fear.html">Fear</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self (30-foot cone)</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/FeignDeath.html">Feign Death</a>
+                            </td>
+                            <td>1 action<sup>R</sup></td>
+                            <td>Touch</td>
+                            <td>1 hour</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/HypnoticPattern.html">Hypnotic Pattern</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/InciteGreed.html">Incite Greed</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/IntellectFortress.html">Intellect Fortress</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Concentration, up to 1 hour</td>
+                            <td>Verbal</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/MajorImage.html">Major Image</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Concentration, up to 10 minutes</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/MassHealingWord.html">Mass Healing Word</a>
+                            </td>
+                            <td>1 bonus action</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/MotivationalSpeech.html">Motivational Speech</a>
+                            </td>
+                            <td>1 minute</td>
+                            <td>60 feet</td>
+                            <td>1 hour</td>
+                            <td>Verbal</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/Nondetection.html">Nondetection</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>8 hours</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/Sending.html">Sending</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Unlimited</td>
+                            <td>1 round</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/Slow.html">Slow</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/SpeakWithDead.html">Speak With Dead</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>10 feet</td>
+                            <td>10 minutes</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/SpeakWithPlants.html">Speak With Plants</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self (30-foot radius)</td>
+                            <td>10 minutes</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/StinkingCloud.html">Stinking Cloud</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>90 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Conjuration</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="3rd/ThunderStep.html">Thunder Step</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>90 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal</td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td style="border-bottom: none">
+                                <a class="body_link" href="3rd/Tongues.html">Tongues</a>
+                            </td>
+                            <td style="border-bottom: none">1 action</td>
+                            <td style="border-bottom: none">Touch</td>
+                            <td style="border-bottom: none">1 hour</td>
+                            <td style="border-bottom: none">Verbal, Material</td>
+                            <td style="border-bottom: none">Divination</td>
+                        </tr>
+                    </tbody>
+                    <tbody id="4th" class="spell_level_table" style="display: none;">
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="4th/CharmMonster.html">Charm Monster</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>1 hour</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="4th/Compulsion.html">Compulsion</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="4th/Confusion.html">Confusion</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>90 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="4th/DimensionDoor.html">Dimension Door</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>500 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal</td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="4th/DominateBeast.html">Dominate Beast</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="4th/ElementalBane.html">Elemental Bane</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>90 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="4th/GreaterInvisibility.html">Greater Invisibility</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="4th/HallucinatoryTerrain.html">Hallucinatory Terrain</a>
+                            </td>
+                            <td>10 minutes</td>
+                            <td>300 feet</td>
+                            <td>24 hours</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="4th/LeomundsSecretChest.html">Leomund's Secret Chest</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="4th/PhantasmalKiller.html">Phantasmal Killer</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="4th/Polymorph.html">Polymorph</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 1 hour</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Transmutation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td style="border-bottom: none">
+                                <a class="body_link" href="4th/RaulothimsPsychicLance.html">Raulothim's Psychic Lance</a>
+                            </td>
+                            <td style="border-bottom: none">1 action</td>
+                            <td style="border-bottom: none">120 feet</td>
+                            <td style="border-bottom: none">Instantaneous</td>
+                            <td style="border-bottom: none">Verbal</td>
+                            <td style="border-bottom: none">Enchantment</td>
+                        </tr>
+                    </tbody>
+                    <tbody id="5th" class="spell_level_table" style="display: none;">
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/DominatePerson.html">Dominate Person</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/Dream.html">Dream</a>
+                            </td>
+                            <td>1 minute</td>
+                            <td>Unlimited</td>
+                            <td>8 hours</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/FarStep.html">Far Step</a>
+                            </td>
+                            <td>1 bonus action</td>
+                            <td>Self</td>
+                            <td>Concentration, up to 1 hour</td>
+                            <td>Verbal</td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/Geas.html">Geas</a>
+                            </td>
+                            <td>1 minute</td>
+                            <td>60 feet</td>
+                            <td>30 days</td>
+                            <td>Verbal</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/GreaterRestoration.html">Greater Restoration</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/HoldMonster.html">Hold Monster</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>90 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/LegendLore.html">Legend Lore</a>
+                            </td>
+                            <td>10 minutes</td>
+                            <td>Self</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/MassCureWounds.html">Mass Cure Wounds</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/ModifyMemory.html">Modify Memory</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/PlanarBinding.html">Planar Binding</a>
+                            </td>
+                            <td>1 hour</td>
+                            <td>60 feet</td>
+                            <td>24 hours</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/RaiseDead.html">Raise Dead</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/RarysTelepathicBond.html">Rary's Telepathic Bond</a>
+                            </td>
+                            <td>1 action<sup>R</sup></td>
+                            <td>30 feet</td>
+                            <td>1 hour</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/Scrying.html">Scrying</a>
+                            </td>
+                            <td>10 minutes</td>
+                            <td>Self</td>
+                            <td>Concentration, up to 10 minutes</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/Seeming.html">Seeming</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>8 hours</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/SkillEmpowerment.html">Skill Empowerment</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Concentration, up to 1 hour</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="5th/SynapticStatic.html">Synaptic Static</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td style="border-bottom: none">
+                                <a class="body_link" href="5th/TeleportationCircle.html">Teleportation Circle</a>
+                            </td>
+                            <td style="border-bottom: none">1 minute</td>
+                            <td style="border-bottom: none">10 feet</td>
+                            <td style="border-bottom: none">1 round</td>
+                            <td style="border-bottom: none">Verbal, Material<sup>$C</sup></td>
+                            <td style="border-bottom: none">Distortion</td>
+                        </tr>
+                    </tbody>
+                    <tbody id="6th" class="spell_level_table" style="display: none;">
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="6th/ArcaneGate.html">Arcane Gate</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>500 feet</td>
+                            <td>Concentration, up to 10 minutes</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="6th/FindThePath.html">Find the Path</a>
+                            </td>
+                            <td>1 minute</td>
+                            <td>Self</td>
+                            <td>Concentration, up to 1 day</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="6th/GuardsAndWards.html">Guards and Wards</a>
+                            </td>
+                            <td>10 minutes</td>
+                            <td>Touch</td>
+                            <td>24 hours</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Conjuration, Enchantment, Illusion, and Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="6th/HeroesFeast.html">Heroes' Feast</a>
+                            </td>
+                            <td>10 minutes</td>
+                            <td>30 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="6th/MassSuggestion.html">Mass Suggestion</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>24 hours</td>
+                            <td>Verbal, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="6th/OttosIrresistibleDance.html">Otto's Irresistible Dance</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="6th/ProgrammedIllusion.html">Programmed Illusion</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Until dispelled</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td style="border-bottom: none">
+                                <a class="body_link" href="6th/TrueSeeing.html">True Seeing</a>
+                            </td>
+                            <td style="border-bottom: none">1 action</td>
+                            <td style="border-bottom: none">Touch</td>
+                            <td style="border-bottom: none">1 hour</td>
+                            <td style="border-bottom: none">Verbal, Gesture, Material<sup>$</sup></td>
+                            <td style="border-bottom: none">Divination</td>
+                        </tr>
+                    </tbody>
+                    <tbody id="7th" class="spell_level_table" style="display: none;">
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="7th/DreamOfTheBlueVeil.html">Dream of the Blue Veil</a>
+                            </td>
+                            <td>10 minutes</td>
+                            <td>20 feet</td>
+                            <td>6 hours</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="7th/Etherealness.html">Etherealness</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self</td>
+                            <td>8 hours</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="7th/MirageArcane.html">Mirage Arcane</a>
+                            </td>
+                            <td>10 minutes</td>
+                            <td>Sight</td>
+                            <td>10 days</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="7th/MordenkainensMagnificentMansion.html">Mordenkainen's Magnificent Mansion</a>
+                            </td>
+                            <td>1 minute</td>
+                            <td>300 feet</td>
+                            <td>24 hours</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Conjuration</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="7th/PlaneShift.html">Plane Shift</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="7th/PowerWordPain.html">Power Word: Pain</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="7th/ProjectImage.html">Project Image</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>500 miles</td>
+                            <td>Concentration, up to 1 day</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Illusion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="7th/Regenerate.html">Regenerate</a>
+                            </td>
+                            <td>1 minute</td>
+                            <td>Touch</td>
+                            <td>1 hour</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="7th/Resurrection.html">Resurrection</a>
+                            </td>
+                            <td>1 hour</td>
+                            <td>Touch</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="7th/Sequester.html">Sequester</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>Until dispelled</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="7th/Symbol.html">Symbol</a>
+                            </td>
+                            <td>1 minute</td>
+                            <td>Touch</td>
+                            <td>Until dispelled or triggered</td>
+                            <td>Verbal, Gesture, Material<sup>$C</sup></td>
+                            <td>Enchantment or Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td style="border-bottom: none">
+                                <a class="body_link" href="7th/Teleport.html">Teleport</a>
+                            </td>
+                            <td style="border-bottom: none">1 action</td>
+                            <td style="border-bottom: none">10 feet</td>
+                            <td style="border-bottom: none">Instantaneous</td>
+                            <td style="border-bottom: none">Verbal</td>
+                            <td style="border-bottom: none">Distortion</td>
+                        </tr>
+                    </tbody>
+                    <tbody id="8th" class="spell_level_table" style="display: none;">
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="8th/AntipathySympathy.html">Antipathy/Sympathy</a>
+                            </td>
+                            <td>1 hour</td>
+                            <td>60 feet</td>
+                            <td>10 days</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="8th/DominateMonster.html">Dominate Monster</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 1 hour</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="8th/Feeblemind.html">Feeblemind</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>150 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="8th/Glibness.html">Glibness</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Self</td>
+                            <td>1 hour</td>
+                            <td>Verbal</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="8th/MindBlank.html">Mind Blank</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>Touch</td>
+                            <td>24 hours</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Manifestation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="8th/PowerWordStun.html">Power Word: Stun</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal, Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td style="border-bottom: none">
+                                <a class="body_link" href="8th/Telepathy.html">Telepathy</a>
+                            </td>
+                            <td style="border-bottom: none">1 action</td>
+                            <td style="border-bottom: none">Unlimited</td>
+                            <td style="border-bottom: none">24 hours</td>
+                            <td style="border-bottom: none">Verbal, Gesture, Material</td>
+                            <td style="border-bottom: none">Enchantment</td>
+                        </tr>
+                    </tbody>
+                    <tbody id="9th" class="spell_level_table" style="display: none;">
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="9th/Foresight.html">Foresight</a>
+                            </td>
+                            <td>1 minute</td>
+                            <td>Touch</td>
+                            <td>8 hours</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Divination</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="9th/Gate.html">Gate</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Concentration, up to 1 minute</td>
+                            <td>Verbal, Gesture, Material<sup>$</sup></td>
+                            <td>Distortion</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="9th/MassPolymorph.html">Mass Polymorph</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>120 feet</td>
+                            <td>Concentration, up to 1 hour</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Transmutation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="9th/PowerWordHeal.html">Power Word: Heal</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="9th/PowerWordKill.html">Power Word: Kill</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>60 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Verbal</td>
+                            <td>Necromancy</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="9th/PsychicScream.html">Psychic Scream</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>90 feet</td>
+                            <td>Instantaneous</td>
+                            <td>Gesture</td>
+                            <td>Enchantment</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td>
+                                <a class="body_link" href="9th/TruePolymorph.html">True Polymorph</a>
+                            </td>
+                            <td>1 action</td>
+                            <td>30 feet</td>
+                            <td>Concentration, up to 1 hour</td>
+                            <td>Verbal, Gesture, Material</td>
+                            <td>Transmutation</td>
+                        </tr>
+                        <tr class="class_table_content_row">
+                            <td style="border-bottom: none">
+                                <a class="body_link" href="9th/Weird.html">Weird</a>
+                            </td>
+                            <td style="border-bottom: none">1 action</td>
+                            <td style="border-bottom: none">120 feet</td>
+                            <td style="border-bottom: none">Concentration, up to 1 minute</td>
+                            <td style="border-bottom: none">Verbal, Gesture</td>
+                            <td style="border-bottom: none">Enchantment</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <div class="space"></div>
+</body>

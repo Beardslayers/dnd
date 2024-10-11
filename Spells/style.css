@@ -1,0 +1,196 @@
+.spell_row_center {
+    float: left;
+    width: 70%;
+    /*border-style: groove;*/
+    /*border-width: 3px;*/
+    background-color: white;
+    box-shadow: 1.5px 1.5px 0 0px #aaaaaa inset, -1.5px -1.5px 0 0px #555555 inset; /*darker: 555555, lighter: aaaaaa*/
+    border-left: solid #555555 1.5px;
+    border-top: solid #555555 1.5px;
+    border-bottom: solid #aaaaaa 1.5px;
+    border-right: solid #aaaaaa 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spell_center_content {
+    width: 100%;
+    text-align: center;
+}
+
+.spell_list {
+    background-color: #908149;
+    width: 130px;
+    margin: 0px 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a.spell_list_link:link {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #ECE9E4;*/
+    color: black;
+}
+a.spell_list_link:visited {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #ECE9E4;*/
+    color: black;
+}
+a.spell_list_link:hover {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #f7f7f7;*/
+    /*color: #ffffff;*/
+    color: darkgrey;
+    border-style: groove;
+    border-width: 0;
+}
+a.spell_list_link:active {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #ECE9E4;*/
+}
+
+.spell_link_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0px 100px 20px;
+    /*background-color: green;*/
+}
+
+.spell_tab {
+    border-bottom: none;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: white;
+    font-size: 1.2em;
+    margin-bottom: 4px;
+}
+
+.spell_tab:link {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #ECE9E4;*/
+    color: black;
+}
+.spell_tab:visited {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #ECE9E4;*/
+    color: black;
+}
+.spell_tab:hover {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #f7f7f7;*/
+    /*color: #ffffff;*/
+    color: black;
+    background-color: lightgray;
+    cursor: pointer;
+}
+.spell_tab:active {
+    text-decoration: none;
+    /*color: rgb(73, 73, 73);*/
+    /*color: #ECE9E4;*/
+    background-color: darkgray;
+}
+
+.spell_tab.active/*:link*/ {
+    background-color: lightgray;
+}
+
+.spell_tab.active:active {
+    background-color: darkgray;
+}
+
+.spell_level_table {
+   /*display: none;*/
+}
+
+.junk {
+    height: 100px;
+    width: 500px;
+    background-color: blue;
+    display: none;
+}
+
+    .spell_table td {
+        border-top: none;
+        border-bottom: 1pt solid black;
+        border-left: none;
+        border-right: none;
+    }
+
+    .spell_table th, .spell_table td {
+        padding: 8px 4px; /*20px*/
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .spell_table tr:hover {
+        background-color: lightgray;
+    }
+
+    table.spell_table {
+        width: 100%;
+        border-spacing: 0;
+        margin-bottom: 1.5px;
+    }
+
+    tr.class_table_header_row th {
+        background-color: #908149;
+    }
+
+    th.spell_name {
+        width: 20%;
+    }
+
+    th.casting_time {
+        width: 15%;
+    }
+
+    th.range {
+        width: 10%;
+    }
+
+    th.duration {
+        width: 15%;
+    }
+
+    th.components {
+        width: 20%;
+    }
+
+    .spell_list_header_content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 98%;
+    }
+
+    .spell_list_key {
+        width: 20%;
+        margin: 10px 0;
+    }
+
+    .spell_list_key p {
+        margin: 0;
+        text-align: center;
+    }
+
+    .spell_list_empty {
+        width: 20%;
+    }
